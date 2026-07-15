@@ -3,6 +3,7 @@
 import Image from "next/image";
 import {
   Play,
+  Film,
   ShoppingCart,
   BookOpen
 } from "lucide-react";
@@ -23,7 +24,7 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="text-[26px] sm:text-5xl lg:text-[56px] font-bold tracking-tight leading-[1.1] text-zinc-950"
           >
-            <span className="text-[#ff6b35]">Trex IPTV</span> 4k | Trex OTT IPTV | Trex IPTV Subscription
+            <span className="text-[#ff6b35]">Trex IPTV</span> 4k | Trex IPTV Subscription | Trex OTT IPTV
           </motion.h1>
 
           {/* Description paragraph: exactly matching the text in the screenshot */}
@@ -33,7 +34,7 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
             className="mt-3 sm:mt-6 text-zinc-600 text-[13px] sm:text-[15px] leading-relaxed font-medium max-w-xl"
           >
-            Trex IPTV instant activation available. Get a Trex IPTV Subscription at discounted rates. Stream channels, movies, all sports & web series on Trex IPTV Player in HD, UHD & 4k quality from anywhere in the world. Trex OTT IPTV works on Smart TV, Firestick, Android, iOS, Windows, MAG Box, Enigma2 & many more.
+            Trex IPTV instant activation available. Get a Trex IPTV Subscription at discounted rates. Trex IPTV Player allows you to stream channels, movies, all sports & web series in HD, UHD & 4k quality from anywhere in the world. Users can use Trex OTT IPTV on Smart TV, Firestick, Android, iOS, Windows, MAG Box, Enigma2 & many more.
           </motion.p>
 
           {/* Buttons in the exact style of the image */}
@@ -86,6 +87,17 @@ export default function Hero() {
               <div>
                 <h3 className="text-xs font-bold text-zinc-950 leading-tight">Live Channels</h3>
                 <p className="text-[11px] text-zinc-500">95,000+ Channels</p>
+              </div>
+            </div>
+
+            {/* VOD Library */}
+            <div className="flex items-center gap-2">
+              <div className="w-9 h-9 rounded-lg bg-orange-50 flex items-center justify-center flex-shrink-0">
+                <Film className="w-4 h-4 text-[#ff6b35]" />
+              </div>
+              <div>
+                <h3 className="text-xs font-bold text-zinc-950 leading-tight">VOD Library</h3>
+                <p className="text-[11px] text-zinc-500">Movies & Series</p>
               </div>
             </div>
 

@@ -30,7 +30,7 @@ function StepItem({ step, index }: { step: GuideStep; index: number }) {
         <p className="text-[12px] sm:text-sm text-zinc-600 leading-relaxed">{step.description}</p>
         {step.note && (
           <p className="text-[12px] sm:text-sm text-zinc-500 leading-relaxed mt-1.5 sm:mt-2">
-            <span className="font-bold text-zinc-600">Step Note:</span> {step.note}
+            <span className="font-bold text-zinc-600">{step.noteLabel ?? "Step Note"}:</span> {step.note}
           </p>
         )}
       </div>

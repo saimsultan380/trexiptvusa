@@ -88,7 +88,7 @@ export default function ContactTrialDevicesSection() {
         </h2>
 
         <p className="text-zinc-500 text-[13px] sm:text-[15px] leading-relaxed">
-          Start a 24-hour free trial and test Trex IPTV on the device you already use every day.
+          Trex IPTV works on every device you own — start a 24-hour free trial.
         </p>
       </motion.div>
 
@@ -164,7 +164,7 @@ export default function ContactTrialDevicesSection() {
           href="/installation-guide"
           className="inline-flex h-11 sm:h-12 w-full sm:w-auto items-center justify-center rounded-[4px] border border-zinc-300 bg-white px-6 sm:px-8 text-[13px] sm:text-sm font-bold text-zinc-900 hover:bg-zinc-50 transition-colors"
         >
-          Installation Guide →
+          Get Free Installation Guide →
         </motion.a>
       </motion.div>
     </section>

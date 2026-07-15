@@ -10,7 +10,38 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 
-const steps = [
+const homeSteps = [
+  {
+    id: "01",
+    icon: <ClipboardList className="h-5 w-5" />,
+    title: "Pick Your Plan",
+    description:
+      "Select a 1, 3, 6, or 12-month Trex IPTV plan and choose how many devices you need.",
+  },
+  {
+    id: "02",
+    icon: <CreditCard className="h-5 w-5" />,
+    title: "Complete Payment",
+    description:
+      "Pay securely via Card, Bank Transfer, Stripe, Wise, Google Pay, Shopify, PayPal, World Remit, or cryptocurrency. Your order will be processed immediately.",
+  },
+  {
+    id: "03",
+    icon: <KeyRound className="h-5 w-5" />,
+    title: "Receive Trex IPTV Login",
+    description:
+      "You will receive your Trex IPTV login credentials instantly via email or WhatsApp after payment.",
+  },
+  {
+    id: "04",
+    icon: <Play className="h-5 w-5" />,
+    title: "Start Watching IPTV",
+    description:
+      "Enter your Trex IPTV login details into the app and unlock channels right away.",
+  },
+];
+
+const subscriptionSteps = [
   {
     id: "01",
     icon: <ClipboardList className="h-5 w-5" />,
@@ -48,8 +79,19 @@ const steps = [
   },
 ];
 
-export default function SetupProcessSection() {
+type SetupProcessSectionProps = {
+  variant?: "home" | "subscription";
+};
+
+export default function SetupProcessSection({
+  variant = "home",
+}: SetupProcessSectionProps = {}) {
   const phoneNumber = "447482794475";
+  const isSubscription = variant === "subscription";
+  const steps = isSubscription ? subscriptionSteps : homeSteps;
+  const gridCols = isSubscription
+    ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
+    : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4";
 
   return (
     <section className="mx-auto max-w-7xl w-full px-6 py-12 sm:px-8 sm:py-16 lg:py-24 bg-white">
@@ -64,7 +106,9 @@ export default function SetupProcessSection() {
         >
           <span className="text-[#ff6b35] text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-3 flex items-center gap-1.5">
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#ff6b35]" />
-            Simple Setup Process for Trex IPTV Subscription Plans
+            {isSubscription
+              ? "Simple Setup Process for Trex IPTV Subscription Plans"
+              : "How It Works — 4 Easy Steps"}
           </span>
           <h2 className="text-[26px] sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight text-zinc-900 max-w-xl">
             Streaming With <span className="text-[#ff6b35]">Trex IPTV</span> in Under 4 Minutes
@@ -94,7 +138,7 @@ export default function SetupProcessSection() {
           aria-hidden
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-2.5 sm:gap-4 relative z-10">
+        <div className={`grid ${gridCols} gap-2.5 sm:gap-4 relative z-10`}>
           {steps.map((step, index) => (
             <motion.div
               key={step.id}

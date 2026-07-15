@@ -7,7 +7,15 @@ import {
   DEFAULT_DESCRIPTION,
   DEFAULT_TITLE,
   SITE_EMAIL,
+  SITE_LOGO_HEIGHT,
+  SITE_LOGO_ICON_PATH,
+  SITE_LOGO_ICON_SIZE,
+  SITE_LOGO_PATH,
+  SITE_LOGO_WIDTH,
   SITE_NAME,
+  SITE_OG_IMAGE_HEIGHT,
+  SITE_OG_IMAGE_PATH,
+  SITE_OG_IMAGE_WIDTH,
   SITE_URL,
 } from "@/lib/site";
 
@@ -21,10 +29,27 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteLogoUrl = `${SITE_URL}${SITE_LOGO_PATH}`;
+const siteLogoIconUrl = `${SITE_URL}${SITE_LOGO_ICON_PATH}`;
+const ogImage = {
+  url: SITE_OG_IMAGE_PATH,
+  width: SITE_OG_IMAGE_WIDTH,
+  height: SITE_OG_IMAGE_HEIGHT,
+  alt: `${SITE_NAME} – Premium IPTV Subscription`,
+  type: "image/png",
+};
+
 export const metadata: Metadata = {
-  title: DEFAULT_TITLE,
-  description: DEFAULT_DESCRIPTION,
   metadataBase: new URL(SITE_URL),
+  applicationName: SITE_NAME,
+  title: {
+    default: DEFAULT_TITLE,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: DEFAULT_DESCRIPTION,
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
   alternates: {
     canonical: `${SITE_URL}/`,
   },
@@ -44,23 +69,26 @@ export const metadata: Metadata = {
   openGraph: {
     title: DEFAULT_TITLE,
     description: DEFAULT_DESCRIPTION,
-    url: SITE_URL,
+    url: `${SITE_URL}/`,
     siteName: SITE_NAME,
     locale: "en_US",
     type: "website",
+    images: [ogImage],
   },
   twitter: {
     card: "summary_large_image",
     title: DEFAULT_TITLE,
     description: DEFAULT_DESCRIPTION,
+    images: [ogImage],
   },
   icons: {
+    // Google prefers a square favicon that is a multiple of 48px (e.g. 192).
     icon: [
-      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
       { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
       { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
     ],
-    shortcut: "/favicon.png",
+    shortcut: "/icon-192.png",
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   manifest: "/manifest.json",
@@ -104,24 +132,50 @@ export default function RootLayout({
               {
                 "@context": "https://schema.org",
                 "@type": "WebSite",
-                "name": SITE_NAME,
-                "alternateName": ["Trex IPTV US", "TrexIPTV"],
-                "url": SITE_URL,
-                "description": DEFAULT_DESCRIPTION,
-                "inLanguage": "en-US"
+                name: SITE_NAME,
+                alternateName: ["Trex IPTV US", "TrexIPTV", "Trex IPTV USA"],
+                url: `${SITE_URL}/`,
+                description: DEFAULT_DESCRIPTION,
+                inLanguage: "en-US",
+                publisher: {
+                  "@type": "Organization",
+                  name: SITE_NAME,
+                  url: `${SITE_URL}/`,
+                  logo: {
+                    "@type": "ImageObject",
+                    url: siteLogoIconUrl,
+                    width: SITE_LOGO_ICON_SIZE,
+                    height: SITE_LOGO_ICON_SIZE,
+                  },
+                },
               },
               {
                 "@context": "https://schema.org",
                 "@type": "Organization",
-                "name": SITE_NAME,
-                "url": SITE_URL,
-                "logo": `${SITE_URL}/logo.PNG`,
-                "contactPoint": {
+                name: SITE_NAME,
+                alternateName: ["Trex IPTV US", "TrexIPTV", "Trex IPTV USA"],
+                url: `${SITE_URL}/`,
+                logo: {
+                  "@type": "ImageObject",
+                  url: siteLogoIconUrl,
+                  contentUrl: siteLogoIconUrl,
+                  width: SITE_LOGO_ICON_SIZE,
+                  height: SITE_LOGO_ICON_SIZE,
+                  caption: SITE_NAME,
+                },
+                image: {
+                  "@type": "ImageObject",
+                  url: siteLogoUrl,
+                  width: SITE_LOGO_WIDTH,
+                  height: SITE_LOGO_HEIGHT,
+                },
+                contactPoint: {
                   "@type": "ContactPoint",
-                  "email": SITE_EMAIL,
-                  "contactType": "customer support"
-                }
-              }
+                  email: SITE_EMAIL,
+                  contactType: "customer support",
+                  availableLanguage: ["English"],
+                },
+              },
             ]),
           }}
         />

@@ -8,27 +8,27 @@ const devices = [
   {
     icon: <Flame className="h-4 w-4" />,
     name: "Firestick / Fire TV",
-    desc: "Amazon Firestick, Fire TV Stick 4K, Fire TV Cube",
+    desc: "Install Trex IPTV on Amazon Firestick, Fire TV Stick 4K, Fire TV Cube",
   },
   {
     icon: <Smartphone className="h-4 w-4" />,
     name: "Android Devices",
-    desc: "Samsung Galaxy, OnePlus, Xiaomi, Oppo, and Huawei",
+    desc: "Run Trex IPTV streaming on Samsung Galaxy, OnePlus, Xiaomi, Oppo, and Huawei using your preferred IPTV player app.",
   },
   {
     icon: <Box className="h-4 w-4" />,
     name: "Android Box",
-    desc: "Nvidia Shield, Xiaomi Mi Box, H96 Max, X96 Mini",
+    desc: "Turn your Nvidia Shield, Xiaomi Mi Box, H96 Max, and X96 Mini into a full entertainment hub with IPTV Trex",
   },
   {
     icon: <Tv className="h-4 w-4" />,
     name: "Smart TV",
-    desc: "Samsung, LG, Sony, Hisense, Philips, TCL",
+    desc: "Enjoy Trex IPTV streaming on Samsung, LG, Sony, Hisense, Philips, and TCL.",
   },
   {
     icon: <Radio className="h-4 w-4" />,
     name: "Roku Devices",
-    desc: "Roku Express, Roku Streaming Stick, Roku Ultra, Roku TV",
+    desc: "Stream on your Roku Express, Roku Streaming Stick, Roku Ultra, and Roku TV",
   },
   {
     icon: <Apple className="h-4 w-4" />,

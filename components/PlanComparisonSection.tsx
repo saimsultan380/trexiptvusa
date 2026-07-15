@@ -145,7 +145,7 @@ export default function PlanComparisonSection() {
 
         <h2 className="text-[24px] sm:text-4xl lg:text-[44px] font-bold tracking-tight leading-[1.15] text-zinc-900 mb-3 sm:mb-4">
           Choose a Trex IPTV Subscription Plan According to Your{" "}
-          <span className="text-[#ff6b35]">Requirements &amp; Needs.</span>
+          <span className="text-[#ff6b35]">Requirements &amp; Needs</span>
         </h2>
 
         <p className="text-zinc-500 text-[13px] sm:text-[15px] leading-relaxed mb-5 sm:mb-6">

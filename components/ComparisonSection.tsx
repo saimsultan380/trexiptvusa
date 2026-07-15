@@ -7,38 +7,38 @@ const rows = [
   {
     icon: <Link2 className="h-4 w-4" />,
     feature: "Source",
-    other: "Resold access through multiple middlemen",
-    trex: "Direct connection to the original provider",
+    other: "Resellers — not the actual source",
+    trex: "The original provider since day one",
   },
   {
     icon: <Wifi className="h-4 w-4" />,
     feature: "Reliability",
-    other: "Frequent outages and unstable streams",
-    trex: "High uptime with stable, consistent streams",
+    other: "Here today, gone tomorrow. Accounts vanish without warning, and your money goes with them",
+    trex: "Established and trusted since 2014. Real business, real people, real track record behind every subscription.",
   },
   {
     icon: <Server className="h-4 w-4" />,
     feature: "Delivery Path",
-    other: "Long, congested routes with slow delivery",
-    trex: "Optimized direct routing for faster delivery",
+    other: "More hops, more buffering. Your stream travels through multiple third-party servers before reaching your screen.",
+    trex: "You connect directly to our server. Shorter path means faster delivery, clearer picture, and zero buffering.",
   },
   {
     icon: <Lock className="h-4 w-4" />,
     feature: "Privacy",
-    other: "Your data may be shared or tracked",
-    trex: "Fully private. No tracking or data sharing",
+    other: "Your data passes through unknown hands. Nobody tells you who is actually processing your personal information.",
+    trex: "Your privacy stays fully protected. No third party ever touches your account data or viewing activity.",
   },
   {
     icon: <ShieldCheck className="h-4 w-4" />,
     feature: "Backup Protection",
-    other: "Limited or no backup when servers fail",
-    trex: "Automatic failover keeps you always online",
+    other: "No backup when things go wrong. Service goes down, and there is nobody to call or answer.",
+    trex: "Automatic server failover guaranteed. If anything disrupts your stream, we switch you to a backup server instantly.",
   },
   {
     icon: <DollarSign className="h-4 w-4" />,
     feature: "Pricing",
-    other: "Higher prices with reseller markups",
-    trex: "Fair pricing with zero reseller markup",
+    other: "You pay inflated reseller prices. Every middleman adds their own markup on top of the actual cost.",
+    trex: "Direct pricing with zero markup. You pay what the service actually costs and get the best value possible.",
   },
 ];
 
@@ -74,10 +74,10 @@ export default function ComparisonSection() {
           className="lg:col-span-4 flex flex-col"
         >
           <span className="text-[#ff6b35] text-xs font-bold tracking-widest uppercase mb-3">
-            TREX IPTV COMPARISON
+            WHY TREX IPTV?
           </span>
           <h2 className="text-[28px] sm:text-4xl lg:text-[44px] font-bold tracking-tight leading-tight text-zinc-900 mb-4">
-            Why More Viewers Choose <span className="text-[#ff6b35]">Trex IPTV</span>
+            Skip the Middleman; Stream Direct With <span className="text-[#ff6b35]">Trex IPTV</span>
           </h2>
           <div className="w-10 h-1 bg-[#ff6b35] rounded-full mb-5" />
           <p className="text-zinc-500 text-[13px] sm:text-[15px] leading-relaxed">

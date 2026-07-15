@@ -39,7 +39,7 @@ export default function InfoSection() {
 
           <div className="space-y-3 mb-6 sm:mb-8">
             <p className="text-zinc-600 text-[13px] sm:text-[15px] leading-relaxed font-medium">
-              Trex IPTV is a premium internet television streaming service replacing cable with instant access to live channels, sports, news, entertainment, movies, and series in stunning 4K HD quality.
+              Trex IPTV is a premium internet television streaming service replacing cable with instant access to live channels, sports, news, entertainment, movies, and series in stunning 4K HD quality. Trex IPTV is one of the leading IPTV services in the world.
             </p>
             <p className="text-zinc-600 text-[13px] sm:text-[15px] leading-relaxed font-medium">
               With Trex IPTV, there are no contracts, no dish installations, and no hidden fees. Trex IPTV Subscribers enjoy pure buffer-free streaming directly on their screens at unbeatable subscription rates from anywhere in the world.

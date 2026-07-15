@@ -138,7 +138,7 @@ export default function ResellerSetupSection() {
             rel="noopener noreferrer"
             className="inline-flex h-11 sm:h-12 items-center justify-center gap-2 rounded-[4px] bg-[#ff6b35] px-6 sm:px-8 text-[13px] sm:text-sm font-bold text-white shadow-sm hover:bg-[#ff5722] transition-colors self-start w-full sm:w-auto"
           >
-            Get Your Reseller Panel Now
+            Contact Us to Get Your Reseller Panel Now
             <ChevronRight className="h-4 w-4" />
           </motion.a>
         </div>

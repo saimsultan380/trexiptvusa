@@ -5,7 +5,7 @@ import { SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact Us for Trex IPTV Free Trial, Setup Guidance & Support",
   description:
-    "Contact Trex IPTV on WhatsApp for a free 24-hour trial, setup guidance, account activation, device installation help, and subscription support. Real human responses within minutes.",
+    "Have a question about your Trex IPTV subscription, or want to try Trex IPTV before buying a plan? Chat with us on WhatsApp for a free 24 hour trial, setup guidance, and 24/7 support.",
   alternates: {
     canonical: `${SITE_URL}/contact/`,
   },

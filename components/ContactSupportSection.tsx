@@ -274,7 +274,7 @@ export default function ContactSupportSection() {
                 <Users className="h-5 w-5" />
               </div>
               <p className="text-[12px] text-zinc-600 font-semibold leading-snug">
-                Our support team is always here for both new subscribers and existing Trex IPTV customers around the clock.
+                Our support team is always here for both new subscribers and existing Trex IPTV customers around the clock. Feel free to Contact us anytime.
               </p>
             </motion.div>
 
@@ -290,7 +290,7 @@ export default function ContactSupportSection() {
                 <Users className="h-5 w-5" />
               </div>
               <p className="text-[12px] text-zinc-600 font-medium leading-snug">
-                Our support team is always here for both new subscribers and existing Trex IPTV customers around the clock. Feel free to contact us anytime.
+                Our support team is always here for both new subscribers and existing Trex IPTV customers around the clock. Feel free to Contact us anytime.
               </p>
             </motion.div>
           </div>

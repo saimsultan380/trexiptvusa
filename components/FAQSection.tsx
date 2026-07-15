@@ -18,7 +18,7 @@ const faqs = [
   {
     question: "Does Trex IPTV Offer a Free Trial?",
     answer:
-      "Yes, Trex IPTV offers a full 24-hour free trial so you can experience the service before purchasing any plan. You get complete access to all the playlists and channel library. There is no need for the credit card. Just reach out to our team by filling out the Contact form or WhatsApp us directly to get your trial credentials and start streaming within minutes.",
+      "Yes, Trex IPTV offers a full 24-hour free trial so you can experience the service before purchasing any plan. You get complete access to all the playlists and channel library. There is no need for a credit card. Just reach out to our team by filling out the Contact form or WhatsApp us directly to get your trial credentials and start streaming within minutes.",
   },
   {
     question: "How Much Internet Speed Does Trex IPTV Need for 4K Streaming?",
@@ -28,7 +28,7 @@ const faqs = [
   {
     question: "Can I Run Trex IPTV on More Than One Device at a Time?",
     answer:
-      "Yes, Trex IPTV offers multi-connection (1, 2, 3 or more simultaneous devices). The good thing is that your whole family can stream on different devices at the same time without any interruption. Simply pick the plan that matches how many screens you need, and everyone gets their own same premium access.",
+      "Yes, Trex IPTV offers multi-connection (1,2,3 or more simultaneous devices). The good thing is that your whole family can stream on different devices at the same time without any interruption. Simply pick the plan that matches how many screens you need, and everyone gets their own same premium access.",
   },
   {
     question: "What Sports Content Does Trex IPTV Cover?",
@@ -38,7 +38,7 @@ const faqs = [
   {
     question: "How Do I Install Trex IPTV on My Firestick?",
     answer:
-      "You can easily install Trex IPTV on your Firestick in under 5 minutes. Simply enable apps from unknown sources in your Firestick settings. After this step, download your preferred IPTV player, such as IPTV Smarters Pro or TiviMate, from the Amazon Appstore. Now, enter your Trex IPTV login credentials, and you are live instantly.",
+      "You can easily install Trex IPTV on your Firestick under 5 minutes. Simply enable apps from unknown sources in your Firestick settings. After this step, download your preferred IPTV player, such as IPTV Smarters Pro or TiviMate, from the Amazon Appstore. Now, enter your Trex IPTV login credentials, and you are live instantly.",
   },
   {
     question: "How Fast Will I Receive My Trex IPTV Subscription?",
@@ -72,7 +72,7 @@ export default function FAQSection() {
         className="text-center mb-8 sm:mb-14"
       >
         <span className="text-[#ff6b35] text-xs font-bold tracking-widest uppercase mb-3 block">
-          TREX IPTV FAQ
+          FAQs
         </span>
         <h2 className="text-[26px] sm:text-4xl lg:text-5xl font-bold tracking-tight text-zinc-900">
           Frequently Asked <span className="text-[#ff6b35]">Questions</span>

@@ -37,8 +37,8 @@ export default function SubscriptionPlansClient() {
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                 className="text-[26px] sm:text-5xl lg:text-[52px] font-bold tracking-tight leading-[1.12] text-zinc-950 mb-4 sm:mb-6"
               >
-                Trex IPTV Subscription Plans at very{" "}
-                <span className="text-[#ff6b35]">Discounted Pricing</span>
+                Trex IPTV Subscription Plans | Buy at Very{" "}
+                <span className="text-[#ff6b35]">Discounted Prices</span>
               </motion.h1>
 
               <motion.p
@@ -56,7 +56,7 @@ export default function SubscriptionPlansClient() {
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
                 className="text-zinc-600 text-[12px] sm:text-[15px] leading-relaxed mb-6 sm:mb-8"
               >
-                Trex IPTV has a subscription plan for every type of viewer. Buy a short one-month plan to try things out, or a full-year subscription to get the best value with premium discounts. After payment confirmation, you will instantly receive a Trex IPTV account activation, along with a complete setup guide and 24/7 support.
+                Trex IPTV has a plan for everyone. You can choose a 1-month plan to test the service or a 1-year plan to save more money. After your payment is confirmed, your Trex IPTV account will be activated within seconds. You will also get an easy Trex IPTV setup guide and 24/7 customer support if you need help.
               </motion.p>
 
               {/* CTA Buttons */}
@@ -111,7 +111,7 @@ export default function SubscriptionPlansClient() {
                 <div className="relative w-full aspect-[1402/1122]">
                   <Image
                     src="/Trex IPTV Subscription Plans at very Discounted Pricing.PNG"
-                    alt="Trex IPTV Subscription Plans at very Discounted Pricing"
+                    alt="Trex IPTV Subscription Plans | Buy at Very Discounted Prices"
                     fill
                     priority
                     className="object-contain"
@@ -149,7 +149,7 @@ export default function SubscriptionPlansClient() {
       </ScrollReveal>
 
       <ScrollReveal>
-        <SetupProcessSection />
+        <SetupProcessSection variant="subscription" />
       </ScrollReveal>
 
       <ScrollReveal>

@@ -22,7 +22,7 @@ const homePlans = [
     durationNum: "1",
     durationLabel: "Month Plan",
     description:
-      "Start with our 1-month plan to test device compatibility and explore all premium features risk-free.",
+      "For new Trex IPTV users, a 1-month subscription is the best option. After activating it, they can test device compatibility and explore all features.",
     tags: [
       { icon: <MonitorCheck className="h-3 w-3" />, label: "Test & Explore" },
       { icon: <Zap className="h-3 w-3" />, label: "All Features Access" },
@@ -35,7 +35,7 @@ const homePlans = [
     durationNum: "3 & 6",
     durationLabel: "Month Plans",
     description:
-      "Choose 3 or 6 months for the perfect balance of flexibility and value. Ideal for consistent streaming.",
+      "If you are a regular Trex IPTV user, then the 3-month and 6-month plans are the premium choice. It gives you flexibility and maximum value.",
     tags: [
       { icon: <Star className="h-3 w-3" />, label: "Great Value" },
       { icon: <RefreshCw className="h-3 w-3" />, label: "Flexible Options" },
@@ -48,7 +48,7 @@ const homePlans = [
     durationNum: "12",
     durationLabel: "Month Plan",
     description:
-      "Our 12-month plan is the most popular choice for non-stop access, less renewal hassle, and maximum savings.",
+      "Most Trex IPTV subscribers choose the 12 month plan. In this, they get non-stop access, zero renewal tension, and maximum savings.",
     tags: [
       { icon: <Star className="h-3 w-3" />, label: "Most Popular" },
       { icon: <Zap className="h-3 w-3" />, label: "Maximum Savings" },
@@ -193,9 +193,7 @@ export default function PlanPickerSection({
     </>
   );
 
-  const intro = isHome
-    ? "Not sure which plan is right for you? Follow our smart recommendations to find the perfect fit for your streaming needs."
-    : null;
+  const intro = null;
 
   const imageAlt = isHome
     ? "Which Trex IPTV Subscription Should You Choose?"

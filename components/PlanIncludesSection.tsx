@@ -17,25 +17,25 @@ const features = [
     icon: Zap,
     title: "Instant Account Activation",
     description:
-      "Get your login credentials in your WhatsApp or email within minutes after payment.",
+      "Receive your Trex IPTV login details on WhatsApp or email within a few minutes after your payment.",
   },
   {
     icon: Monitor,
     title: "Works on Every Device",
     description:
-      "Stream Trex IPTV on Firestick, Smart TV, Android, iPhone, and more.",
+      "Watch Trex IPTV on Firestick, Smart TV, Android, iPhone, tablets, and more.",
   },
   {
     icon: PlayCircle,
     title: "Easy Playlist Setup",
     description:
-      "Add your Trex IPTV playlist link to any player app and start watching instantly.",
+      "Simply add your Trex IPTV playlist link to your IPTV app and start watching.",
   },
   {
     icon: Lock,
     title: "Xtream Codes Login Access",
     description:
-      "Connect easily using your username, password, and server URL on any device.",
+      "Log in easily with your username, password, and server URL on any supported device.",
   },
   {
     icon: Headphones,

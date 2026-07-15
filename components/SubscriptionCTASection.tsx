@@ -24,7 +24,8 @@ export default function SubscriptionCTASection() {
           </span>
 
           <h2 className="text-[22px] sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight text-zinc-900 mb-4 sm:mb-5 max-w-3xl">
-            Still Thinking to Buy Trex IPTV Subscription Plan?
+            Still Thinking to Buy{" "}
+            <span className="text-[#ff6b35]">Trex IPTV</span> Subscription Plan?
           </h2>
 
           <p className="text-zinc-600 text-[13px] sm:text-[16px] leading-relaxed max-w-2xl mb-6 sm:mb-8">

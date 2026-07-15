@@ -19,7 +19,7 @@ export default function FeatureSection() {
             IPTV Streaming Made Simple With <span className="text-[#ff6b35]">Trex IPTV</span>
           </h2>
           <p className="text-zinc-600 text-[13px] sm:text-[15px] leading-relaxed font-medium mb-5 sm:mb-10 max-w-xl">
-            Trex IPTV gives you one simple dashboard to access everything you want to watch. After the activation of the subscription, you can stream directly to your screen by using your Trex IPTV login credentials within 5 minutes. Get an installation guide, 24/7 support with no complicated setups, and no technical knowledge requirement.
+            Trex IPTV gives you one simple dashboard to access everything you want to watch. After the subscription is activated, you can stream directly to your screen within 5 minutes using your Trex IPTV login credentials. We provide a free Trex IPTV installation guide, 24/7 support, easy setups, and you do not require any technical knowledge.
           </p>
 
           <div className="space-y-3 sm:space-y-8">
@@ -31,7 +31,7 @@ export default function FeatureSection() {
               <div>
                 <h4 className="text-[15px] sm:text-[17px] font-bold text-zinc-900 mb-0.5 sm:mb-1">Instant Account Activation</h4>
                 <p className="text-[12px] sm:text-[14px] text-zinc-500 leading-relaxed font-medium">
-                  After purchasing any of the plans or activating a free trial account, you will get access to the complete Trex IPTV playlist library.
+                  After activating a free trial account or purchasing any of the plans, you will get access to the complete Trex IPTV playlist library.
                 </p>
               </div>
             </div>
@@ -44,7 +44,7 @@ export default function FeatureSection() {
               <div>
                 <h4 className="text-[15px] sm:text-[17px] font-bold text-zinc-900 mb-0.5 sm:mb-1">Private and Secure Account</h4>
                 <p className="text-[12px] sm:text-[14px] text-zinc-500 leading-relaxed font-medium">
-                  Trex IPTV provides a fully private, simple, secure, and protected setup process for adding login credentials and an access dashboard.
+                  Trex IPTV provides a fully private, simple, secure, and protected setup process for adding login credentials. Thus, you get access to main dashboard.
                 </p>
               </div>
             </div>

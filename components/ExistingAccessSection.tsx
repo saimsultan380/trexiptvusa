@@ -7,33 +7,33 @@ import { motion } from "framer-motion";
 const benefits = [
   {
     icon: <Tag className="h-5 w-5" />,
-    title: "Scaling Wholesale Pricing",
-    desc: "Better margins as your business grows.",
+    title: "Wholesale Credit Rates",
+    desc: "Buy credits at wholesale rates and earn more as your client base grows.",
   },
   {
     icon: <LayoutDashboard className="h-5 w-5" />,
-    title: "Real-Time Line Management",
-    desc: "Add, renew or suspend lines instantly.",
+    title: "Full Reseller Panel",
+    desc: "Manage all your client lines and subscriptions in real time from one dashboard.",
   },
   {
     icon: <Zap className="h-5 w-5" />,
     title: "Instant Activation",
-    desc: "Deliver access to your customers in seconds.",
+    desc: "Instant activation for every client you add without any delay.",
   },
   {
     icon: <Headphones className="h-5 w-5" />,
-    title: "Dedicated Support",
-    desc: "We've got your back 24/7.",
+    title: "24/7 WhatsApp Support",
+    desc: "Support from our Reseller Support Team any time you need it.",
   },
   {
     icon: <Megaphone className="h-5 w-5" />,
-    title: "Ready-to-Use Marketing Assets",
-    desc: "Banners, templates & promos included.",
+    title: "Ready-to-Use Marketing",
+    desc: "Marketing resources that help you attract and convert clients faster.",
   },
   {
     icon: <ShieldCheck className="h-5 w-5" />,
-    title: "VPN-Friendly Streams",
-    desc: "Works seamlessly with VPNs.",
+    title: "VPN-Friendly Servers",
+    desc: "Every client stream runs through VPN friendly servers, keeping their connection private and secure.",
   },
 ];
 
@@ -79,7 +79,7 @@ export default function ExistingAccessSection() {
           </h2>
 
           <p className="text-zinc-500 text-[13px] sm:text-[15px] leading-relaxed mb-6 sm:mb-8 max-w-sm">
-            Start a steady monthly income stream by selling Trex IPTV under your own brand while we handle the technical side.
+            Turn your network into a steady monthly income by reselling Trex IPTV subscriptions under your own brand. No technical background needed; we handle the servers, you handle the clients, and keep the profits.
           </p>
 
           {/* 6 benefit items — 2 columns */}

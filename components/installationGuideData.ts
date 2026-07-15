@@ -14,6 +14,7 @@ export interface GuideStep {
   title: string;
   description: string;
   note?: string;
+  noteLabel?: string;
 }
 
 export interface InfoBox {
@@ -141,7 +142,7 @@ export const deviceGuides: DeviceGuide[] = [
       { label: "Estimated Time", value: "~5 Minutes", type: "time" },
       {
         label: "Compatible TV Brands",
-        value: "Samsung / LG / Sony / Hisense / Philips / TCL / Most Modern Smart Televisions",
+        value: "Samsung / LG / Sony / Hisense / Philips / TCL/ Most Modern Smart Televisions",
         type: "devices",
       },
     ],
@@ -156,6 +157,7 @@ export const deviceGuides: DeviceGuide[] = [
         description:
           "Each Smart TV brand supports different IPTV player apps, so use the guide below to find the best one for your television.",
         note: "We will confirm the exact app name for your TV model via WhatsApp after your Trex IPTV subscription is activated.",
+        noteLabel: "App Note",
       },
       {
         title: "STEP 3: Install and Launch the App",

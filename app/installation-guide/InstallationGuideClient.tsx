@@ -1,15 +1,23 @@
 "use client";
 
 import Image from "next/image";
-import { MessageCircle, Monitor } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import InstallationBeforeYouBegin from "@/components/InstallationBeforeYouBegin";
 import InstallationTabs from "@/components/InstallationTabs";
 import TroubleshootingSection from "@/components/TroubleshootingSection";
 import InstallationCTASection from "@/components/InstallationCTASection";
 import InstallationFAQ from "@/components/InstallationFAQ";
+
+const heroStats = [
+  { value: "10+", label: "Device Types" },
+  { value: "<5", label: "Minutes to Setup" },
+  { value: "24/7", label: "Setup Support" },
+  { value: "100%", label: "Free Assistance" },
+];
 
 export default function InstallationGuideClient() {
   const phoneNumber = "447482794475";
@@ -32,8 +40,8 @@ export default function InstallationGuideClient() {
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                 className="text-[26px] sm:text-5xl lg:text-[48px] font-bold tracking-tight leading-[1.1] text-zinc-950 mb-4 sm:mb-6"
               >
-                Easy Guide to Set Up or Install{" "}
-                <span className="text-[#ff6b35]">Trex IPTV</span> on any Compatible Devices in under 5 Minutes
+                Easy Guide to Install or Set Up{" "}
+                <span className="text-[#ff6b35]">Trex IPTV</span> on any Compatible Devices in under 4 Minutes
               </motion.h1>
 
               <motion.p
@@ -58,9 +66,18 @@ export default function InstallationGuideClient() {
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.28 }}
-                className="text-zinc-600 text-[12px] sm:text-[14px] leading-relaxed mb-6 sm:mb-8"
+                className="text-zinc-600 text-[12px] sm:text-[14px] leading-relaxed mb-4 sm:mb-5"
               >
                 This step-by-step guide helps you to install or set up Trex IPTV on Firestick, Android boxes, Android smartphones, Smart TV, iPhone or iOS, Windows PC, Mac, MAG Box, STB Emulator, Enigma2 &amp; Roku in under 5 minutes.
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.32 }}
+                className="text-zinc-900 text-[12px] sm:text-[14px] font-bold mb-3"
+              >
+                Do not have a subscription yet?
               </motion.p>
 
               {/* CTA Buttons */}
@@ -68,27 +85,15 @@ export default function InstallationGuideClient() {
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.36 }}
-                className="grid grid-cols-3 gap-2 sm:flex sm:flex-row sm:flex-wrap sm:items-center sm:gap-3"
+                className="flex flex-row flex-wrap items-center gap-2 sm:gap-3 mb-6 sm:mb-8"
               >
                 <motion.a
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   href="/subscription-plans"
-                  className="inline-flex h-11 sm:h-12 items-center justify-center rounded-[4px] bg-[#ff6b35] px-2 sm:px-6 text-[9px] sm:text-sm font-bold text-white shadow-sm hover:bg-[#ff5722] transition-colors text-center leading-tight"
+                  className="inline-flex h-11 sm:h-12 items-center justify-center rounded-[4px] bg-[#ff6b35] px-4 sm:px-6 text-[11px] sm:text-sm font-bold text-white shadow-sm hover:bg-[#ff5722] transition-colors text-center leading-tight"
                 >
-                  <span className="sm:hidden">Plans</span>
-                  <span className="hidden sm:inline">View Subscription Plans</span>
-                </motion.a>
-
-                <motion.a
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  href="/#devices"
-                  className="inline-flex h-11 sm:h-12 items-center justify-center gap-1 sm:gap-2 rounded-[4px] border border-zinc-300 bg-white px-2 sm:px-6 text-[9px] sm:text-sm font-bold text-zinc-900 hover:bg-zinc-50 transition-colors text-center leading-tight"
-                >
-                  <Monitor className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-zinc-500 shrink-0" />
-                  <span className="sm:hidden">Devices</span>
-                  <span className="hidden sm:inline">Compatible Devices</span>
+                  View Trex IPTV Subscription Plans
                 </motion.a>
 
                 <motion.a
@@ -97,12 +102,30 @@ export default function InstallationGuideClient() {
                   href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent("Hi, I need help setting up Trex IPTV")}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-11 sm:h-12 items-center justify-center gap-1 sm:gap-2 rounded-[4px] border border-zinc-300 bg-white px-2 sm:px-6 text-[9px] sm:text-sm font-bold text-zinc-900 hover:bg-zinc-50 transition-colors text-center leading-tight"
+                  className="inline-flex h-11 sm:h-12 items-center justify-center gap-1.5 sm:gap-2 rounded-[4px] border border-zinc-300 bg-white px-4 sm:px-6 text-[11px] sm:text-sm font-bold text-zinc-900 hover:bg-zinc-50 transition-colors text-center leading-tight"
                 >
                   <MessageCircle className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-green-500 shrink-0" />
-                  <span className="sm:hidden">WhatsApp</span>
-                  <span className="hidden sm:inline">Get Set Up Help on WhatsApp</span>
+                  Get Set Up Help on WhatsApp
                 </motion.a>
+              </motion.div>
+
+              {/* Stats */}
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.42 }}
+                className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-4 border-t border-zinc-100"
+              >
+                {heroStats.map((stat) => (
+                  <div key={stat.label} className="min-w-0">
+                    <p className="text-[18px] sm:text-[22px] font-extrabold text-[#ff6b35] leading-none mb-1">
+                      {stat.value}
+                    </p>
+                    <p className="text-[10px] sm:text-[12px] font-semibold text-zinc-500 leading-snug">
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
               </motion.div>
             </div>
 
@@ -117,7 +140,7 @@ export default function InstallationGuideClient() {
                 <div className="relative w-full aspect-[1402/1122]">
                   <Image
                     src="/Easy Guide to Set Up or Install Trex IPTV.PNG"
-                    alt="Easy Guide to Set Up or Install Trex IPTV"
+                    alt="Easy Guide to Install or Set Up Trex IPTV on any Compatible Devices"
                     fill
                     priority
                     className="object-contain"
@@ -130,6 +153,9 @@ export default function InstallationGuideClient() {
         </div>
       </main>
 
+      <ScrollReveal>
+        <InstallationBeforeYouBegin />
+      </ScrollReveal>
       <ScrollReveal>
         <InstallationTabs />
       </ScrollReveal>

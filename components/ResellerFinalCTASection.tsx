@@ -23,7 +23,7 @@ export default function ResellerFinalCTASection() {
         <div className="relative z-10 flex flex-col items-center">
           <span className="inline-flex items-center gap-1.5 text-[#ff6b35] text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-4 sm:mb-5 px-3 py-1.5 rounded-full border border-[#ff6b35]/30 bg-[#ff6b35]/10">
             <span className="w-1.5 h-1.5 rounded-full bg-[#ff6b35] inline-block animate-pulse shrink-0" />
-            Trex IPTV Reseller Program
+            Ready to Start Earning
           </span>
 
           <h2 className="text-[22px] sm:text-4xl lg:text-[44px] font-extrabold tracking-tight leading-tight text-zinc-900 mb-4 sm:mb-5 max-w-3xl">
