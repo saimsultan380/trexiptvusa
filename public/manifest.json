@@ -1,0 +1,21 @@
+{
+  "name": "Trex IPTV",
+  "short_name": "Trex IPTV",
+  "description": "Premium IPTV streaming with 4K quality, multi-device support, and instant activation.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff6b35",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

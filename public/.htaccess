@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # 1. Force trailing slash on all URLs (prevents 403 on directories)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} !(.*)/$
+  RewriteRule ^(.*)$ /$1/ [L,R=301]
+
+  # 2. Map clean URLs with trailing slashes to .html files 
+  # (e.g., /installation-guide/ -> /installation-guide.html)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.*)/$ $1.html [L]
+
+  # 3. Error 404 handling
+  ErrorDocument 404 /404.html
+</IfModule>
