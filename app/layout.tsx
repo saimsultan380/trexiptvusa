@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     images: [ogImage],
   },
   icons: {
-    // Google SERP favicon: multiples of 48px (48, 96, 192). High-contrast on white.
+    // Favicons derived from /logo.PNG (black TREX mark + orange X on white).
     icon: [
       { url: "/favicon.png", type: "image/png", sizes: "48x48" },
       { url: "/icon-96.png", type: "image/png", sizes: "96x96" },
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
       { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
       { url: "/google-logo.png", type: "image/png", sizes: "512x512" },
     ],
-    shortcut: "/icon-192.png",
+    shortcut: ["/favicon.png", "/icon-192.png"],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   manifest: "/manifest.json",
