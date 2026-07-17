@@ -1,5 +1,7 @@
 "use client";
 
+import { WHATSAPP_NUMBER } from "@/lib/site";
+
 import React from "react";
 import Image from "next/image";
 import { ChevronRight, Clock, BookOpen } from "lucide-react";
@@ -18,7 +20,7 @@ import SubscriptionFAQ from "@/components/SubscriptionFAQ";
 import SubscriptionCTASection from "@/components/SubscriptionCTASection";
 
 export default function SubscriptionPlansClient() {
-  const phoneNumber = "447482794475";
+  const phoneNumber = WHATSAPP_NUMBER;
 
   return (
     <div className="min-h-screen bg-white text-zinc-950 font-sans antialiased flex flex-col">

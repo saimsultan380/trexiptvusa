@@ -1,5 +1,7 @@
 "use client";
 
+import { WHATSAPP_NUMBER } from "@/lib/site";
+
 import Image from "next/image";
 import {
   ShoppingCart,
@@ -50,7 +52,7 @@ const setupSteps = [
 ];
 
 export default function ResellerSetupSection() {
-  const phoneNumber = "447482794475";
+  const phoneNumber = WHATSAPP_NUMBER;
   const whatsappHref = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     "Hi, I want to get my Trex IPTV reseller panel now",
   )}`;

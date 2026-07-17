@@ -1,10 +1,12 @@
 "use client";
 
+import { WHATSAPP_NUMBER } from "@/lib/site";
+
 import { motion } from "framer-motion";
 import { ChevronRight, MessageCircle } from "lucide-react";
 
 export default function ContactFinalCTASection() {
-  const phoneNumber = "447482794475";
+  const phoneNumber = WHATSAPP_NUMBER;
   const trialHref = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     "Hi, I want to get my 24h free trial for Trex IPTV",
   )}`;

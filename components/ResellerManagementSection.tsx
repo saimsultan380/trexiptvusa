@@ -1,5 +1,7 @@
 "use client";
 
+import { WHATSAPP_NUMBER } from "@/lib/site";
+
 import Image from "next/image";
 import {
   UserPlus,
@@ -39,7 +41,7 @@ const managementFeatures = [
 ];
 
 export default function ResellerManagementSection() {
-  const phoneNumber = "447482794475";
+  const phoneNumber = WHATSAPP_NUMBER;
   const whatsappHref = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     "Hi, I want to get Trex IPTV reseller access",
   )}`;

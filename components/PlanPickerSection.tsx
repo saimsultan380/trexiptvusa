@@ -1,5 +1,7 @@
 "use client";
 
+import { WHATSAPP_NUMBER } from "@/lib/site";
+
 import Image from "next/image";
 import {
   Calendar,
@@ -158,7 +160,7 @@ export default function PlanPickerSection({
   primaryCta,
   secondaryCta,
 }: PlanPickerSectionProps = {}) {
-  const phoneNumber = "447482794475";
+  const phoneNumber = WHATSAPP_NUMBER;
   const plans = variant === "subscription" ? subscriptionPlans : homePlans;
   const isHome = variant === "home";
 

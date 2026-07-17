@@ -1,10 +1,12 @@
 "use client";
 
+import { WHATSAPP_NUMBER } from "@/lib/site";
+
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 
 export default function FinalCTASection() {
-  const phoneNumber = "447482794475";
+  const phoneNumber = WHATSAPP_NUMBER;
 
   return (
     <section className="mx-auto max-w-7xl w-full px-6 py-12 sm:px-8 sm:py-20 lg:py-28 bg-white">

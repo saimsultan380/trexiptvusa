@@ -1,5 +1,7 @@
 "use client";
 
+import { WHATSAPP_NUMBER } from "@/lib/site";
+
 import {
   ShieldCheck,
   CheckCircle2,
@@ -59,7 +61,7 @@ const flowCards = [
 ];
 
 export default function ContactSupportSection() {
-  const phoneNumber = "447482794475";
+  const phoneNumber = WHATSAPP_NUMBER;
   const whatsappHref = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     "Hi, I need Trex IPTV support",
   )}`;

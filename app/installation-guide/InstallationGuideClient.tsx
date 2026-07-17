@@ -1,5 +1,7 @@
 "use client";
 
+import { WHATSAPP_NUMBER } from "@/lib/site";
+
 import Image from "next/image";
 import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
@@ -20,7 +22,7 @@ const heroStats = [
 ];
 
 export default function InstallationGuideClient() {
-  const phoneNumber = "447482794475";
+  const phoneNumber = WHATSAPP_NUMBER;
 
   return (
     <div className="min-h-screen bg-white text-zinc-950 font-sans antialiased flex flex-col">

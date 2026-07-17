@@ -2,13 +2,20 @@ export const SITE_URL = "https://trexiptvusa.com";
 export const SITE_NAME = "Trex IPTV";
 export const SITE_EMAIL = "support@trexiptvusa.com";
 
-/** Brand logo (used in UI + Organization image). */
+/** WhatsApp number in international format without + (for wa.me links). */
+export const WHATSAPP_NUMBER = "17164943064";
+
+/** Brand logo shown in the site header (high-contrast on white). */
 export const SITE_LOGO_PATH = "/logo.PNG";
 export const SITE_LOGO_WIDTH = 558;
 export const SITE_LOGO_HEIGHT = 447;
 
-/** Square icon for Google Search / Organization logo (min 112×112, preferably square). */
-export const SITE_LOGO_ICON_PATH = "/icon-512.png";
+/**
+ * Square Organization logo for Google Search / Knowledge Panel.
+ * Must be crawlable, ≥112×112, and readable on a white background.
+ * @see https://developers.google.com/search/docs/appearance/structured-data/organization
+ */
+export const SITE_LOGO_ICON_PATH = "/google-logo.png";
 export const SITE_LOGO_ICON_SIZE = 512;
 
 /** Open Graph / Twitter share image (1200×630). */

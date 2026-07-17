@@ -1,5 +1,7 @@
 "use client";
 
+import { WHATSAPP_NUMBER } from "@/lib/site";
+
 import Image from "next/image";
 import {
   Flame,
@@ -63,7 +65,7 @@ const devices = [
 ];
 
 export default function ContactTrialDevicesSection() {
-  const phoneNumber = "447482794475";
+  const phoneNumber = WHATSAPP_NUMBER;
   const trialHref = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     "Hi, I want to get my 24h free trial for Trex IPTV",
   )}`;

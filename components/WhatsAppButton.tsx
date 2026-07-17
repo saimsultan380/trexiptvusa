@@ -1,10 +1,12 @@
 "use client";
 
+import { WHATSAPP_NUMBER } from "@/lib/site";
+
 import React from "react";
 import { motion } from "framer-motion";
 
 export default function WhatsAppButton() {
-  const phoneNumber = "447482794475"; 
+  const phoneNumber = WHATSAPP_NUMBER; 
   const message = "Hi, I'm interested in Trex IPTV. Can you help me?";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

@@ -1,5 +1,7 @@
 "use client";
 
+import { WHATSAPP_NUMBER } from "@/lib/site";
+
 import { Check, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -67,7 +69,7 @@ const resellerPlans = [
 ];
 
 export default function ResellerPricingSection() {
-  const phoneNumber = "447482794475";
+  const phoneNumber = WHATSAPP_NUMBER;
 
   return (
     <section

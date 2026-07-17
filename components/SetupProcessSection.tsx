@@ -1,5 +1,7 @@
 "use client";
 
+import { WHATSAPP_NUMBER } from "@/lib/site";
+
 import Image from "next/image";
 import {
   ClipboardList,
@@ -86,7 +88,7 @@ type SetupProcessSectionProps = {
 export default function SetupProcessSection({
   variant = "home",
 }: SetupProcessSectionProps = {}) {
-  const phoneNumber = "447482794475";
+  const phoneNumber = WHATSAPP_NUMBER;
   const isSubscription = variant === "subscription";
   const steps = isSubscription ? subscriptionSteps : homeSteps;
   const gridCols = isSubscription

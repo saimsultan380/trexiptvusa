@@ -1,5 +1,7 @@
 "use client";
 
+import { WHATSAPP_NUMBER } from "@/lib/site";
+
 import Image from "next/image";
 import { MessageCircle, BookOpen } from "lucide-react";
 import { motion } from "framer-motion";
@@ -13,7 +15,7 @@ import ContactFAQSection from "@/components/ContactFAQSection";
 import ContactFinalCTASection from "@/components/ContactFinalCTASection";
 
 export default function ContactUsClient() {
-  const phoneNumber = "447482794475";
+  const phoneNumber = WHATSAPP_NUMBER;
   const trialHref = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     "Hi, I want to get my 24h free trial for Trex IPTV",
   )}`;

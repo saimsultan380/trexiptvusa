@@ -1,5 +1,7 @@
 "use client";
 
+import { WHATSAPP_NUMBER } from "@/lib/site";
+
 import { useState } from "react";
 import { Check, Calendar, ArrowUpRight, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
@@ -68,7 +70,7 @@ const plans = [
 ];
 
 export default function PricingSection() {
-  const phoneNumber = "447482794475";
+  const phoneNumber = WHATSAPP_NUMBER;
   const [currency, setCurrency] = useState<"eur" | "usd">("eur");
 
   function formatPrice(plan: typeof plans[0]) {

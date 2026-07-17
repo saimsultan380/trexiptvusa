@@ -1,5 +1,7 @@
 "use client";
 
+import { WHATSAPP_NUMBER } from "@/lib/site";
+
 import React, { useState } from "react";
 import {
   Check,
@@ -125,7 +127,7 @@ function formatPrice(plan: (typeof plans)[0], currency: "eur" | "usd") {
 }
 
 export default function PlanComparisonSection() {
-  const phoneNumber = "447482794475";
+  const phoneNumber = WHATSAPP_NUMBER;
   const [currency, setCurrency] = useState<"eur" | "usd">("eur");
 
   return (
