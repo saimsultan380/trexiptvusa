@@ -31,10 +31,10 @@ const geistMono = Geist_Mono({
 const siteLogoUrl = `${SITE_URL}${SITE_LOGO_PATH}`;
 const siteLogoIconUrl = `${SITE_URL}${SITE_LOGO_ICON_PATH}`;
 const ogImage = {
-  url: SITE_OG_IMAGE_PATH,
+  url: `${SITE_URL}${SITE_OG_IMAGE_PATH}`,
   width: SITE_OG_IMAGE_WIDTH,
   height: SITE_OG_IMAGE_HEIGHT,
-  alt: `${SITE_NAME} – Premium IPTV Subscription`,
+  alt: `${SITE_NAME} Logo`,
   type: "image/png",
 };
 

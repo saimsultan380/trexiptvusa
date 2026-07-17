@@ -18,8 +18,8 @@ export const SITE_LOGO_HEIGHT = 447;
 export const SITE_LOGO_ICON_PATH = "/google-logo.png";
 export const SITE_LOGO_ICON_SIZE = 512;
 
-/** Open Graph / Twitter share image (1200×630). */
-export const SITE_OG_IMAGE_PATH = "/og-image.png";
+/** Open Graph / WhatsApp / Twitter share image (1200×630) — built from logo.PNG. */
+export const SITE_OG_IMAGE_PATH = "/og-trex-logo.png";
 export const SITE_OG_IMAGE_WIDTH = 1200;
 export const SITE_OG_IMAGE_HEIGHT = 630;
 
