@@ -24,7 +24,7 @@ export const SITE_OG_IMAGE_WIDTH = 1200;
 export const SITE_OG_IMAGE_HEIGHT = 630;
 
 export const DEFAULT_TITLE =
-  "Trex IPTV | Trex IPTV Subscription | Trex OTT IPTV";
+  "Trex IPTV Subscription | Trex OTT IPTV";
 
 export const DEFAULT_DESCRIPTION =
   "Trex IPTV instant activation. Get a Trex IPTV Subscription at discounted rates. Stream unlimited channels, movies, sports & series. Works on Smart TV, Firestick, Android, iOS & many more.";

@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   applicationName: SITE_NAME,
   title: {
     default: DEFAULT_TITLE,
-    template: `%s | ${SITE_NAME}`,
+    template: "%s",
   },
   description: DEFAULT_DESCRIPTION,
   authors: [{ name: SITE_NAME, url: SITE_URL }],
@@ -82,14 +82,16 @@ export const metadata: Metadata = {
   },
   icons: {
     // Favicons derived from /logo.PNG (black TREX mark + orange X on white).
+    // Google requires a multiple of 48px and a crawlable /favicon.ico.
     icon: [
+      { url: "/favicon.ico", sizes: "any" },
       { url: "/favicon.png", type: "image/png", sizes: "48x48" },
       { url: "/icon-96.png", type: "image/png", sizes: "96x96" },
       { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
       { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
       { url: "/google-logo.png", type: "image/png", sizes: "512x512" },
     ],
-    shortcut: ["/favicon.png", "/icon-192.png"],
+    shortcut: ["/favicon.ico", "/favicon.png"],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   manifest: "/manifest.json",
@@ -125,7 +127,7 @@ export default function RootLayout({
             `,
           }}
         />
-        <meta name="google-site-verification" content="EhyxZgWnepcxpVeyCPHk-lE9A_d3GeuTkk9SQqm6Wt8" />
+        <meta name="google-site-verification" content="z5Tc0PCA9LSFCsjXvhadTW_OwZM_qeVTspR0mLUOuSs" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
