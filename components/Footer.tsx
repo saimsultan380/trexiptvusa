@@ -36,6 +36,7 @@ export default function Footer() {
               <li><a href="/installation-guide/" className="text-zinc-500 hover:text-[#ff6b35] text-[14px] font-semibold transition-colors">Installation Guide</a></li>
               <li><a href="/subscription-plans/" className="text-zinc-500 hover:text-[#ff6b35] text-[14px] font-semibold transition-colors">Subscription Plans</a></li>
               <li><a href="/reseller-panel/" className="text-zinc-500 hover:text-[#ff6b35] text-[14px] font-semibold transition-colors">Reseller Panel</a></li>
+              <li><a href="/blog/" className="text-zinc-500 hover:text-[#ff6b35] text-[14px] font-semibold transition-colors">Blog</a></li>
               <li><a href="/contact/" className="text-zinc-500 hover:text-[#ff6b35] text-[14px] font-semibold transition-colors">Contact Us</a></li>
             </ul>
           </div>
