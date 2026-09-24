@@ -62,3 +62,46 @@ export const BLOG_POSTS: BlogPost[] = [
     author: "Trex IPTV Support Team",
   },
 ];
+
+/** Preferred related-post order per slug for topical relevance. */
+const RELATED_SLUGS: Record<string, string[]> = {
+  "trex-iptv-epg-not-working": [
+    "trex-iptv-m3u-vs-xtream-codes",
+    "trex-iptv-buffering-firestick",
+    "how-to-install-trex-iptv-on-firetv",
+  ],
+  "trex-iptv-buffering-firestick": [
+    "how-to-install-trex-iptv-on-firetv",
+    "trex-iptv-epg-not-working",
+    "trex-iptv-m3u-vs-xtream-codes",
+  ],
+  "trex-iptv-m3u-vs-xtream-codes": [
+    "how-to-install-trex-iptv-on-firetv",
+    "trex-iptv-epg-not-working",
+    "trex-iptv-buffering-firestick",
+  ],
+  "how-to-install-trex-iptv-on-firetv": [
+    "trex-iptv-m3u-vs-xtream-codes",
+    "trex-iptv-buffering-firestick",
+    "trex-iptv-epg-not-working",
+  ],
+};
+
+export function getBlogPostBySlug(slug: string): BlogPost | undefined {
+  return BLOG_POSTS.find((post) => post.slug === slug);
+}
+
+export function getRelatedPosts(slug: string, limit = 3): BlogPost[] {
+  const preferred = RELATED_SLUGS[slug] ?? [];
+  const ordered = preferred
+    .map((s) => getBlogPostBySlug(s))
+    .filter((post): post is BlogPost => Boolean(post));
+
+  if (ordered.length >= limit) return ordered.slice(0, limit);
+
+  const extras = BLOG_POSTS.filter(
+    (post) => post.slug !== slug && !ordered.some((p) => p.slug === post.slug)
+  );
+
+  return [...ordered, ...extras].slice(0, limit);
+}

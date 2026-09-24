@@ -18,6 +18,8 @@ import {
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import RelatedPosts from "@/components/RelatedPosts";
+import BlogInlineLink from "@/components/BlogInlineLink";
 import { WHATSAPP_NUMBER } from "@/lib/site";
 
 export default function BlogPostClient() {
@@ -280,7 +282,11 @@ export default function BlogPostClient() {
             Trex IPTV EPG problems can be confusing because your channels may continue playing normally while the TV guide shows &quot;No Information&quot;, missing programmes, wrong times, or an incomplete schedule.
           </p>
           <p className="mt-3 sm:mt-4 text-sm sm:text-lg text-zinc-700 leading-relaxed font-normal">
-            EPG means Electronic Program Guide. It provides programme names, schedules, descriptions, and other guide information inside your IPTV player. When Trex IPTV EPG stops working, the problem may come from the provider&apos;s EPG data, TiviMate or another IPTV player, channel matching, your device settings, or a temporary EPG outage. This guide shows you how to identify the cause and fix the problem step by step.
+            EPG means Electronic Program Guide. It provides programme names, schedules, descriptions, and other guide information inside your IPTV player. When Trex IPTV EPG stops working, the problem may come from the provider&apos;s EPG data, TiviMate or another IPTV player, channel matching, your device settings, or a temporary EPG outage. This guide shows you how to identify the cause and fix the problem step by step. If the player is not installed yet, use the{" "}
+            <BlogInlineLink href="/how-to-install-trex-iptv-on-firetv/">
+              Fire TV Trex IPTV setup guide
+            </BlogInlineLink>
+            .
           </p>
 
           <div className="mt-6 p-4 rounded-xl bg-orange-50/80 border border-orange-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
@@ -294,7 +300,7 @@ export default function BlogPostClient() {
               href="/trex-iptv-buffering-firestick/"
               className="inline-flex items-center gap-1 text-xs sm:text-sm font-bold text-[#ff6b35] hover:text-[#ff5722] shrink-0 hover:underline"
             >
-              Read Buffering Fix Guide <ArrowRight className="h-3.5 w-3.5" />
+              Fix Trex IPTV buffering on Firestick <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </div>
 
@@ -688,7 +694,11 @@ export default function BlogPostClient() {
           </div>
 
           <p className="text-xs sm:text-base text-zinc-600 leading-relaxed mb-4">
-            Your connection method (M3U vs Xtream Codes) can affect how the IPTV player receives information, but changing methods is not a guaranteed EPG fix. First check whether the EPG source itself is available.
+            Your connection method (
+            <BlogInlineLink href="/trex-iptv-m3u-vs-xtream-codes/">
+              M3U vs Xtream Codes
+            </BlogInlineLink>
+            ) can affect how the IPTV player receives information, but changing methods is not a guaranteed EPG fix. First check whether the EPG source itself is available.
           </p>
           <p className="text-xs sm:text-base text-zinc-600 leading-relaxed">
             Regional channel matching can also be harder — for example CNN USA vs CNN Canada. If only regional channels are affected, investigate channel mapping before assuming the complete EPG is broken.
@@ -853,15 +863,29 @@ export default function BlogPostClient() {
         </section>
 
         {/* CTA */}
+        <RelatedPosts currentSlug="trex-iptv-epg-not-working" />
+
         <section className="p-6 sm:p-10 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#ff6b35]/10 via-orange-50/50 to-white border border-[#ff6b35]/30">
           <h2 className="text-xl sm:text-2xl font-extrabold text-zinc-950 mb-2 sm:mb-3 tracking-tight">
             Still Missing Guide Data?
           </h2>
           <p className="text-xs sm:text-base text-zinc-700 leading-relaxed mb-3 sm:mb-4">
-            If Trex IPTV channels are working but the guide is missing, start with the troubleshooting steps above before changing your entire IPTV setup. Check the EPG update status, refresh the guide, verify your Firestick time, and test another device or player.
+            If Trex IPTV channels are working but the guide is missing, start with the troubleshooting steps above before changing your entire IPTV setup. Check the EPG update status, refresh the guide, verify your Firestick time, and test another device or player. You can also browse the{" "}
+            <BlogInlineLink href="/blog/">
+              full Trex IPTV blog
+            </BlogInlineLink>{" "}
+            or review{" "}
+            <BlogInlineLink href="/subscription-plans/">
+              current Trex IPTV subscription plans
+            </BlogInlineLink>
+            .
           </p>
           <p className="text-xs sm:text-base text-zinc-700 leading-relaxed mb-6">
-            If the same problem continues everywhere, contact your IPTV provider and report the exact channels and time when the EPG stopped working. Only access IPTV services and content you are legally authorised to use in your location.
+            If the same problem continues everywhere,{" "}
+            <BlogInlineLink href="/contact/">
+              contact our Trex IPTV support team
+            </BlogInlineLink>{" "}
+            and report the exact channels and time when the EPG stopped working. Only access IPTV services and content you are legally authorised to use in your location.
           </p>
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
             <a
@@ -877,7 +901,7 @@ export default function BlogPostClient() {
               href="/subscription-plans/"
               className="inline-flex h-11 sm:h-12 items-center justify-center rounded-lg bg-[#ff6b35] hover:bg-[#ff5722] text-white font-bold text-xs sm:text-sm px-5 sm:px-6 transition-colors shadow-sm text-center"
             >
-              View Subscription Plans
+              View Trex IPTV Subscription Plans
             </Link>
           </div>
         </section>

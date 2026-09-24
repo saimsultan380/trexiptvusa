@@ -4,10 +4,45 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Clock, ArrowRight, Calendar } from "lucide-react";
+import {
+  Clock,
+  ArrowRight,
+  Calendar,
+  BookOpen,
+  Wrench,
+  CreditCard,
+  MessageCircle,
+} from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { BLOG_POSTS } from "@/lib/blogData";
+
+const HUB_LINKS = [
+  {
+    href: "/installation-guide/",
+    label: "Multi-device installation guide",
+    description: "Set up Trex IPTV on Android, Smart TV, iOS, PC, and more.",
+    icon: BookOpen,
+  },
+  {
+    href: "/subscription-plans/",
+    label: "Trex IPTV subscription plans",
+    description: "Compare pricing and choose the right plan for your devices.",
+    icon: CreditCard,
+  },
+  {
+    href: "/contact/",
+    label: "Contact Trex IPTV support",
+    description: "Get help with setup, EPG, buffering, or account questions.",
+    icon: MessageCircle,
+  },
+  {
+    href: "/how-to-install-trex-iptv-on-firetv/",
+    label: "Fire TV / Firestick setup",
+    description: "Install Trex IPTV on Amazon Fire TV in a few minutes.",
+    icon: Wrench,
+  },
+];
 
 export default function BlogClient() {
   return (
@@ -16,21 +51,74 @@ export default function BlogClient() {
 
       {/* Hero Section with Centered 'Blog' */}
       <section className="pt-24 pb-8 sm:pt-36 sm:pb-14 lg:pt-44 lg:pb-16 border-b border-zinc-100 bg-gradient-to-b from-zinc-50/80 via-zinc-50/30 to-white text-center">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-zinc-950"
           >
-            Blog
+            Trex IPTV Blog
           </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, delay: 0.08, ease: "easeOut" }}
+            className="mt-4 sm:mt-5 text-sm sm:text-base text-zinc-600 leading-relaxed max-w-2xl"
+          >
+            Practical guides for installing Trex IPTV, choosing M3U or Xtream Codes,
+            fixing Firestick buffering, and repairing a missing EPG TV guide.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* Content hub links */}
+      <section className="border-b border-zinc-100 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+          <div className="flex flex-wrap items-end justify-between gap-3 mb-4 sm:mb-5">
+            <div>
+              <span className="text-[11px] sm:text-xs font-bold text-[#ff6b35] uppercase tracking-wider">
+                Help Hub
+              </span>
+              <h2 className="text-lg sm:text-xl font-extrabold text-zinc-950 tracking-tight mt-1">
+                Popular Trex IPTV resources
+              </h2>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+            {HUB_LINKS.map((item) => {
+              const Icon = item.icon;
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="group p-4 rounded-2xl border border-zinc-200 bg-zinc-50/60 hover:bg-white hover:border-[#ff6b35]/40 hover:shadow-sm transition-all"
+                >
+                  <Icon className="h-5 w-5 text-[#ff6b35] mb-2.5" />
+                  <span className="block text-sm font-bold text-zinc-950 group-hover:text-[#ff6b35] transition-colors">
+                    {item.label}
+                  </span>
+                  <span className="block text-xs text-zinc-500 mt-1 leading-relaxed">
+                    {item.description}
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </section>
 
       {/* Blog Posts 3-Cards Per Row Grid */}
       <main className="flex-grow py-8 sm:py-14 lg:py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-6 sm:mb-8">
+            <h2 className="text-xl sm:text-2xl font-extrabold text-zinc-950 tracking-tight">
+              Latest IPTV guides
+            </h2>
+            <p className="mt-1.5 text-xs sm:text-sm text-zinc-600">
+              Installation, connection methods, buffering fixes, and EPG troubleshooting.
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {BLOG_POSTS.map((post) => (
               <motion.article
@@ -98,7 +186,7 @@ export default function BlogClient() {
                       href={post.href}
                       className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#ff6b35] group-hover:text-[#ff5722] transition-colors shrink-0"
                     >
-                      Read Guide <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+                      Read full guide <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>
                 </div>

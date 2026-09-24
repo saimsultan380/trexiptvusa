@@ -19,6 +19,8 @@ import {
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import RelatedPosts from "@/components/RelatedPosts";
+import BlogInlineLink from "@/components/BlogInlineLink";
 import { WHATSAPP_NUMBER } from "@/lib/site";
 
 export default function BlogPostClient() {
@@ -168,6 +170,7 @@ export default function BlogPostClient() {
         "If Player A buffers but Player B plays normally, the issue may be related to the first player.",
         "Do not immediately conclude that one player is universally better.",
       ],
+      tip: "player-check",
     },
     {
       stepNumber: "09",
@@ -387,7 +390,11 @@ export default function BlogPostClient() {
             Trex IPTV buffering on Firestick can be frustrating, especially when other streaming apps work normally. A spinning loading circle does not always mean your internet is too slow. The problem can come from Wi-Fi instability, Firestick storage, the IPTV player, VPN routing, network congestion, or the streaming server.
           </p>
           <p className="mt-3 sm:mt-4 text-sm sm:text-lg text-zinc-700 leading-relaxed font-normal">
-            The good news is that you can usually narrow down the cause without changing everything at once. This guide explains why Trex IPTV buffers on Firestick and gives you a practical troubleshooting process, including what to do when buffering happens only at night or during live events.
+            The good news is that you can usually narrow down the cause without changing everything at once. This guide explains why Trex IPTV buffers on Firestick and gives you a practical troubleshooting process, including what to do when buffering happens only at night or during live events. If you still need to install the player, start with the{" "}
+            <BlogInlineLink href="/how-to-install-trex-iptv-on-firetv/">
+              Trex IPTV Fire TV installation guide
+            </BlogInlineLink>
+            .
           </p>
 
           <div className="mt-6 p-4 rounded-xl bg-orange-50/80 border border-orange-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
@@ -401,7 +408,7 @@ export default function BlogPostClient() {
               href="/how-to-install-trex-iptv-on-firetv/"
               className="inline-flex items-center gap-1 text-xs sm:text-sm font-bold text-[#ff6b35] hover:text-[#ff5722] shrink-0 hover:underline"
             >
-              Read Fire TV Setup Guide <ArrowRight className="h-3.5 w-3.5" />
+              Install Trex IPTV on Firestick step by step <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </div>
 
@@ -578,7 +585,22 @@ export default function BlogPostClient() {
                   </ul>
                   {s.tip && (
                     <div className="mt-3 p-2.5 sm:p-3 rounded-lg bg-amber-50 border border-amber-200/80 text-[11px] sm:text-xs text-amber-900">
-                      <strong>Tip:</strong> {s.tip}
+                      <strong>Tip:</strong>{" "}
+                      {s.stepNumber === "08" ? (
+                        <>
+                          Reinstall or reconfigure your player using the{" "}
+                          <BlogInlineLink href="/how-to-install-trex-iptv-on-firetv/">
+                            Trex IPTV Fire TV installation guide
+                          </BlogInlineLink>{" "}
+                          if the app itself looks corrupted. Also compare login methods in the{" "}
+                          <BlogInlineLink href="/trex-iptv-m3u-vs-xtream-codes/">
+                            M3U vs Xtream Codes guide
+                          </BlogInlineLink>
+                          .
+                        </>
+                      ) : (
+                        s.tip
+                      )}
                     </div>
                   )}
                   {s.warning && (
@@ -626,6 +648,17 @@ export default function BlogPostClient() {
               </tbody>
             </table>
           </div>
+          <p className="mt-4 text-xs sm:text-base text-zinc-600 leading-relaxed">
+            If the symptom is a blank TV guide rather than freezing video, switch to our{" "}
+            <BlogInlineLink href="/trex-iptv-epg-not-working/">
+              Trex IPTV EPG not working fix guide
+            </BlogInlineLink>
+            . Unsure whether M3U or Xtream Codes is contributing? See the{" "}
+            <BlogInlineLink href="/trex-iptv-m3u-vs-xtream-codes/">
+              Trex IPTV M3U vs Xtream Codes comparison
+            </BlogInlineLink>
+            .
+          </p>
         </section>
 
         {/* Fast step-by-step */}
@@ -809,15 +842,25 @@ export default function BlogPostClient() {
         </section>
 
         {/* CTA */}
+        <RelatedPosts currentSlug="trex-iptv-buffering-firestick" />
+
         <section className="p-6 sm:p-10 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#ff6b35]/10 via-orange-50/50 to-white border border-[#ff6b35]/30">
           <h2 className="text-xl sm:text-2xl font-extrabold text-zinc-950 mb-2 sm:mb-3 tracking-tight">
             Still Experiencing Buffering?
           </h2>
           <p className="text-xs sm:text-base text-zinc-700 leading-relaxed mb-3 sm:mb-4">
-            Check your Trex IPTV account and connection details, then test the service again using the troubleshooting steps above. If the issue continues across multiple channels, contact your provider with the device, player, time and channel information so the problem can be investigated more efficiently.
+            Check your Trex IPTV account and connection details, then test the service again using the troubleshooting steps above. If the issue continues across multiple channels,{" "}
+            <BlogInlineLink href="/contact/">
+              contact Trex IPTV support
+            </BlogInlineLink>{" "}
+            with the device, player, time and channel information so the problem can be investigated more efficiently.
           </p>
           <p className="text-xs sm:text-base text-zinc-700 leading-relaxed mb-6">
-            Only access IPTV services and content you are legally authorised to use in your location.
+            Only access IPTV services and content you are legally authorised to use in your location. Explore more help articles in the{" "}
+            <BlogInlineLink href="/blog/">
+              Trex IPTV blog hub
+            </BlogInlineLink>
+            .
           </p>
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
             <a
@@ -833,7 +876,7 @@ export default function BlogPostClient() {
               href="/subscription-plans/"
               className="inline-flex h-11 sm:h-12 items-center justify-center rounded-lg bg-[#ff6b35] hover:bg-[#ff5722] text-white font-bold text-xs sm:text-sm px-5 sm:px-6 transition-colors shadow-sm text-center"
             >
-              View Subscription Plans
+              View Trex IPTV Subscription Plans
             </Link>
           </div>
         </section>

@@ -22,6 +22,8 @@ import {
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import RelatedPosts from "@/components/RelatedPosts";
+import BlogInlineLink from "@/components/BlogInlineLink";
 import { WHATSAPP_NUMBER } from "@/lib/site";
 
 export default function BlogPostClient() {
@@ -193,7 +195,15 @@ export default function BlogPostClient() {
     },
     {
       q: "Buffering or freezing during playback?",
-      a: "Switch to a wired Ethernet connection if possible. If using Wi-Fi, connect to the 5 GHz band. You can also lower the stream quality to 1080p inside the player settings or restart your Fire TV.",
+      a: (
+        <>
+          Switch to a wired Ethernet connection if possible. If using Wi-Fi, connect to the 5 GHz band. You can also lower the stream quality to 1080p inside the player settings or restart your Fire TV. For a deeper fix list, follow our{" "}
+          <BlogInlineLink href="/trex-iptv-buffering-firestick/">
+            Trex IPTV buffering on Firestick troubleshooting guide
+          </BlogInlineLink>
+          .
+        </>
+      ),
     },
     {
       q: "Black screen when opening a channel?",
@@ -201,7 +211,15 @@ export default function BlogPostClient() {
     },
     {
       q: "Credentials showing as invalid?",
-      a: "Double-check your username, password, and URL for any casing or spacing errors. Copy and paste them directly from WhatsApp or email. If the issue persists, message our WhatsApp support team for instant credential verification.",
+      a: (
+        <>
+          Double-check your username, password, and URL for any casing or spacing errors. Copy and paste them directly from WhatsApp or email. Confirm you selected the correct login method in our{" "}
+          <BlogInlineLink href="/trex-iptv-m3u-vs-xtream-codes/">
+            M3U vs Xtream Codes comparison
+          </BlogInlineLink>
+          . If the issue persists, message our WhatsApp support team for instant credential verification.
+        </>
+      ),
     },
     {
       q: "App not installing from Downloader?",
@@ -209,7 +227,15 @@ export default function BlogPostClient() {
     },
     {
       q: "EPG not loading or showing guide data?",
-      a: "Go into your IPTV player settings and select 'Refresh EPG' or 'Update Guide Data'. Give it 60 seconds to fully fetch and sync the schedule.",
+      a: (
+        <>
+          Go into your IPTV player settings and select &apos;Refresh EPG&apos; or &apos;Update Guide Data&apos;. Give it 60 seconds to fully fetch and sync the schedule. If the guide still says &quot;No Information,&quot; use our{" "}
+          <BlogInlineLink href="/trex-iptv-epg-not-working/">
+            Trex IPTV EPG not working fix guide
+          </BlogInlineLink>
+          .
+        </>
+      ),
     },
   ];
 
@@ -265,6 +291,17 @@ export default function BlogPostClient() {
           <p className="mt-6 sm:mt-8 text-sm sm:text-lg text-zinc-700 leading-relaxed font-normal">
             If you want to watch Trex IPTV on your Amazon Fire TV, you are in the right place. This guide covers everything to install Trex IPTV from start to finish in simple, easy steps. Users need no technical experience, and the whole setup takes under 5 minutes. By the end of this guide, you will have your complete Trex IPTV channel library up and running on your Fire TV in full 4K quality.
           </p>
+          <p className="mt-3 sm:mt-4 text-sm sm:text-lg text-zinc-700 leading-relaxed font-normal">
+            Need an active account first? Compare{" "}
+            <BlogInlineLink href="/subscription-plans/">
+              Trex IPTV subscription plans
+            </BlogInlineLink>{" "}
+            before you install. Prefer another device? See the full{" "}
+            <BlogInlineLink href="/installation-guide/">
+              Trex IPTV installation guide for every device
+            </BlogInlineLink>
+            .
+          </p>
 
           {/* Cross-link banner (Mobile responsive stack) */}
           <div className="mt-6 p-4 rounded-xl bg-orange-50/80 border border-orange-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
@@ -278,7 +315,7 @@ export default function BlogPostClient() {
               href="/installation-guide/"
               className="inline-flex items-center gap-1 text-xs sm:text-sm font-bold text-[#ff6b35] hover:text-[#ff5722] shrink-0 hover:underline"
             >
-              Read Guide for other Devices <ArrowRight className="h-3.5 w-3.5" />
+              Open multi-device installation guide <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </div>
 
@@ -560,6 +597,15 @@ export default function BlogPostClient() {
                         {s.callout.title}:
                       </strong>
                       {s.callout.text}
+                      {s.stepNumber === "07" && (
+                        <p className="mt-2">
+                          Still unsure which login method to use?{" "}
+                          <BlogInlineLink href="/trex-iptv-m3u-vs-xtream-codes/">
+                            Compare Trex IPTV M3U vs Xtream Codes
+                          </BlogInlineLink>
+                          .
+                        </p>
+                      )}
                     </div>
                   )}
                 </div>
@@ -723,6 +769,8 @@ export default function BlogPostClient() {
         </section>
 
         {/* SECTION 8: Final Thoughts & Support CTA */}
+        <RelatedPosts currentSlug="how-to-install-trex-iptv-on-firetv" />
+
         <section className="p-6 sm:p-10 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#ff6b35]/10 via-orange-50/50 to-white border border-[#ff6b35]/30">
           <h2 className="text-xl sm:text-2xl font-extrabold text-zinc-950 mb-2 sm:mb-3 tracking-tight">
             Final Thoughts
@@ -731,7 +779,15 @@ export default function BlogPostClient() {
             Installing Trex IPTV on Fire TV is one of the quickest and most straightforward setups available. Once you have your credentials ready, the whole process takes under 5 minutes, and you are watching in full 4K quality on your big screen.
           </p>
           <p className="text-xs sm:text-base text-zinc-700 leading-relaxed mb-6">
-            If you face any issues at any point, our support team is available 24 hours a day on WhatsApp. You will get guidance for every step in real time at no extra cost.
+            If you face any issues at any point, our support team is available 24 hours a day on WhatsApp. You will get guidance for every step in real time at no extra cost. You can also{" "}
+            <BlogInlineLink href="/contact/">
+              contact the Trex IPTV support team
+            </BlogInlineLink>{" "}
+            or browse more help articles in the{" "}
+            <BlogInlineLink href="/blog/">
+              Trex IPTV blog
+            </BlogInlineLink>
+            .
           </p>
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">

@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Trex IPTV Blog: Guides, Setup Tutorials & Streaming Tips",
   description:
-    "Explore Trex IPTV installation tutorials, device setup walkthroughs, troubleshooting tips, and streaming advice for Firestick, Android, Smart TV & more.",
+    "Explore Trex IPTV installation tutorials, M3U vs Xtream Codes, Firestick buffering fixes, EPG troubleshooting, and streaming advice for Firestick, Android, Smart TV & more.",
   path: "/blog/",
 });
 

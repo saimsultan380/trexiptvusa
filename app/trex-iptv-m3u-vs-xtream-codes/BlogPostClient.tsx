@@ -19,6 +19,8 @@ import {
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import RelatedPosts from "@/components/RelatedPosts";
+import BlogInlineLink from "@/components/BlogInlineLink";
 import { WHATSAPP_NUMBER } from "@/lib/site";
 
 export default function BlogPostClient() {
@@ -167,10 +169,18 @@ export default function BlogPostClient() {
 
           {/* Intro Paragraph */}
           <p className="mt-6 sm:mt-8 text-sm sm:text-lg text-zinc-700 leading-relaxed font-normal">
-            When setting up Trex IPTV, you may be asked to choose between an M3U link and Xtream Codes. If you are new to IPTV, the two options can look confusing because both can connect your player to the same subscription.
+            When setting up Trex IPTV, you may be asked to choose between an M3U link and Xtream Codes. If you are new to IPTV, the two options can look confusing because both can connect your player to the same{" "}
+            <BlogInlineLink href="/subscription-plans/">
+              Trex IPTV subscription
+            </BlogInlineLink>
+            .
           </p>
           <p className="mt-3 sm:mt-4 text-sm sm:text-lg text-zinc-700 leading-relaxed font-normal">
-            The main difference is how your IPTV player receives and organises the service. M3U provides a playlist containing stream information, while Xtream Codes uses login details to communicate with the provider&apos;s API. This guide explains the difference in simple terms, including EPG, VOD, setup, buffering, compatibility, and common problems.
+            The main difference is how your IPTV player receives and organises the service. M3U provides a playlist containing stream information, while Xtream Codes uses login details to communicate with the provider&apos;s API. This guide explains the difference in simple terms, including EPG, VOD, setup, buffering, compatibility, and common problems. Setting up on Firestick? Follow our{" "}
+            <BlogInlineLink href="/how-to-install-trex-iptv-on-firetv/">
+              step-by-step Trex IPTV Fire TV installation guide
+            </BlogInlineLink>
+            .
           </p>
 
           {/* Cross-link banner */}
@@ -185,7 +195,7 @@ export default function BlogPostClient() {
               href="/how-to-install-trex-iptv-on-firetv/"
               className="inline-flex items-center gap-1 text-xs sm:text-sm font-bold text-[#ff6b35] hover:text-[#ff5722] shrink-0 hover:underline"
             >
-              Read Fire TV Guide <ArrowRight className="h-3.5 w-3.5" />
+              Install Trex IPTV on Fire TV in 3 minutes <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </div>
 
@@ -461,7 +471,11 @@ export default function BlogPostClient() {
             Not necessarily. Community experiences do not support a simple rule that Xtream Codes automatically provides better streaming performance. In some setups, users report different behaviour between the two methods — but the cause can be the player, playlist processing, server response, network conditions, or playlist editors.
           </p>
           <p className="text-xs sm:text-base text-zinc-600 leading-relaxed mb-4">
-            If your IPTV is buffering, changing from M3U to Xtream Codes can be worth testing, but it should not be treated as a guaranteed buffering fix. Start by checking:
+            If your IPTV is buffering, changing from M3U to Xtream Codes can be worth testing, but it should not be treated as a guaranteed buffering fix. For a full Firestick-focused checklist, read how to{" "}
+            <BlogInlineLink href="/trex-iptv-buffering-firestick/">
+              fix Trex IPTV buffering on Firestick
+            </BlogInlineLink>
+            . Start by checking:
           </p>
           <ul className="space-y-2 mb-2">
             {[
@@ -496,7 +510,11 @@ export default function BlogPostClient() {
             M3U does not automatically mean that EPG will be missing. An M3U playlist can contain information that helps a player connect channels with EPG data, and an IPTV service may also provide a separate XMLTV EPG source. Xtream Codes can make EPG configuration easier in players that support the relevant API features.
           </p>
           <p className="text-xs sm:text-base text-zinc-600 leading-relaxed mb-4">
-            However, the quality of your EPG ultimately depends on the data supplied by the service and how your IPTV player handles it. If your EPG is blank, try:
+            However, the quality of your EPG ultimately depends on the data supplied by the service and how your IPTV player handles it. If your EPG is blank, try the steps below — or follow our full{" "}
+            <BlogInlineLink href="/trex-iptv-epg-not-working/">
+              Trex IPTV EPG not working troubleshooting guide
+            </BlogInlineLink>
+            :
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
             {[
@@ -537,10 +555,18 @@ export default function BlogPostClient() {
             Which Is Better for TiviMate?
           </h2>
           <p className="text-xs sm:text-base text-zinc-600 leading-relaxed mb-4">
-            If you are using TiviMate and your service provides both options, either may work. Xtream Codes can be convenient because you enter the server address, username, and password instead of handling a long playlist URL. M3U can still be useful when you want direct control over the playlist or need to use an application that specifically works with M3U URLs.
+            If you are using TiviMate and your service provides both options, either may work. Xtream Codes can be convenient because you enter the server address, username, and password instead of handling a long playlist URL. M3U can still be useful when you want direct control over the playlist or need to use an application that specifically works with M3U URLs. Setting TiviMate up on Firestick? Use the{" "}
+            <BlogInlineLink href="/how-to-install-trex-iptv-on-firetv/">
+              Fire TV Trex IPTV setup walkthrough
+            </BlogInlineLink>
+            .
           </p>
           <div className="p-3.5 sm:p-4 rounded-xl bg-zinc-100 text-xs sm:text-sm text-zinc-700 font-medium">
-            💡 <strong>Important:</strong> Xtream Codes is not a replacement for good EPG data. If the provider does not supply usable guide information, changing the login method may not solve the problem.
+            💡 <strong>Important:</strong> Xtream Codes is not a replacement for good EPG data. If the provider does not supply usable guide information, changing the login method may not solve the problem. See how to{" "}
+            <BlogInlineLink href="/trex-iptv-epg-not-working/">
+              repair a missing Trex IPTV EPG guide
+            </BlogInlineLink>
+            .
           </div>
         </section>
 
@@ -882,12 +908,22 @@ export default function BlogPostClient() {
         </section>
 
         {/* Final CTA */}
+        <RelatedPosts currentSlug="trex-iptv-m3u-vs-xtream-codes" />
+
         <section className="p-6 sm:p-10 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#ff6b35]/10 via-orange-50/50 to-white border border-[#ff6b35]/30">
           <h2 className="text-xl sm:text-2xl font-extrabold text-zinc-950 mb-2 sm:mb-3 tracking-tight">
             Ready to Choose Your Connection Method?
           </h2>
           <p className="text-xs sm:text-base text-zinc-700 leading-relaxed mb-3 sm:mb-4">
-            If you already have a Trex IPTV subscription, check which connection options are provided with your account and use the format best supported by your IPTV player.
+            If you already have a Trex IPTV subscription, check which connection options are provided with your account and use the format best supported by your IPTV player. Browse more help topics in the{" "}
+            <BlogInlineLink href="/blog/">
+              Trex IPTV blog
+            </BlogInlineLink>{" "}
+            or review{" "}
+            <BlogInlineLink href="/installation-guide/">
+              device installation instructions
+            </BlogInlineLink>
+            .
           </p>
           <p className="text-xs sm:text-base text-zinc-700 leading-relaxed mb-6">
             If you are considering the service, review the available setup options and device compatibility before choosing a plan. Only use IPTV services and content that you are legally authorised to access in your location.
