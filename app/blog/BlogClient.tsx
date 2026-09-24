@@ -4,45 +4,10 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import {
-  Clock,
-  ArrowRight,
-  Calendar,
-  BookOpen,
-  Wrench,
-  CreditCard,
-  MessageCircle,
-} from "lucide-react";
+import { Clock, ArrowRight, Calendar } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { BLOG_POSTS } from "@/lib/blogData";
-
-const HUB_LINKS = [
-  {
-    href: "/installation-guide/",
-    label: "Multi-device installation guide",
-    description: "Set up Trex IPTV on Android, Smart TV, iOS, PC, and more.",
-    icon: BookOpen,
-  },
-  {
-    href: "/subscription-plans/",
-    label: "Trex IPTV subscription plans",
-    description: "Compare pricing and choose the right plan for your devices.",
-    icon: CreditCard,
-  },
-  {
-    href: "/contact/",
-    label: "Contact Trex IPTV support",
-    description: "Get help with setup, EPG, buffering, or account questions.",
-    icon: MessageCircle,
-  },
-  {
-    href: "/how-to-install-trex-iptv-on-firetv/",
-    label: "Fire TV / Firestick setup",
-    description: "Install Trex IPTV on Amazon Fire TV in a few minutes.",
-    icon: Wrench,
-  },
-];
 
 export default function BlogClient() {
   return (
@@ -69,42 +34,6 @@ export default function BlogClient() {
             Practical guides for installing Trex IPTV, choosing M3U or Xtream Codes,
             fixing Firestick buffering, and repairing a missing EPG TV guide.
           </motion.p>
-        </div>
-      </section>
-
-      {/* Content hub links */}
-      <section className="border-b border-zinc-100 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
-          <div className="flex flex-wrap items-end justify-between gap-3 mb-4 sm:mb-5">
-            <div>
-              <span className="text-[11px] sm:text-xs font-bold text-[#ff6b35] uppercase tracking-wider">
-                Help Hub
-              </span>
-              <h2 className="text-lg sm:text-xl font-extrabold text-zinc-950 tracking-tight mt-1">
-                Popular Trex IPTV resources
-              </h2>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-            {HUB_LINKS.map((item) => {
-              const Icon = item.icon;
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="group p-4 rounded-2xl border border-zinc-200 bg-zinc-50/60 hover:bg-white hover:border-[#ff6b35]/40 hover:shadow-sm transition-all"
-                >
-                  <Icon className="h-5 w-5 text-[#ff6b35] mb-2.5" />
-                  <span className="block text-sm font-bold text-zinc-950 group-hover:text-[#ff6b35] transition-colors">
-                    {item.label}
-                  </span>
-                  <span className="block text-xs text-zinc-500 mt-1 leading-relaxed">
-                    {item.description}
-                  </span>
-                </Link>
-              );
-            })}
-          </div>
         </div>
       </section>
 
