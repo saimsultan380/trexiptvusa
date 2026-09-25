@@ -13,6 +13,31 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "trex-iptv-keeps-buffering",
+    href: "/trex-iptv-keeps-buffering/",
+    title: "Trex IPTV Keeps Buffering? 15 Ways to Fix Trex IPTV Buffering",
+    description:
+      "Trex IPTV keeps buffering? Learn 15 practical fixes for Wi-Fi, Firestick, TiviMate, VPN, server issues, evening buffering, and slow streams.",
+    image: "/trex_iptv_15_buffering_fixes_square.png",
+    category: "Troubleshooting Guide",
+    readTime: "12 min read",
+    date: "September 2026",
+    author: "Trex IPTV Support Team",
+    featured: true,
+  },
+  {
+    slug: "trex-iptv-multiple-screens",
+    href: "/trex-iptv-multiple-screens/",
+    title: "Trex IPTV Multiple Screens or Devices: How Many Can You Use?",
+    description:
+      "Can Trex IPTV run on multiple screens? Learn how simultaneous connections work, what happens on two TVs, and how to avoid connection-limit problems.",
+    image: "/trex_iptv_multiple_screens_square.png",
+    category: "Setup Guide",
+    readTime: "11 min read",
+    date: "September 2026",
+    author: "Trex IPTV Support Team",
+  },
+  {
     slug: "trex-iptv-epg-not-working",
     href: "/trex-iptv-epg-not-working/",
     title: "Trex IPTV EPG Not Working: Causes & How to Fix in Minutes?",
@@ -23,7 +48,6 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "13 min read",
     date: "September 2026",
     author: "Trex IPTV Support Team",
-    featured: true,
   },
   {
     slug: "trex-iptv-buffering-firestick",
@@ -65,25 +89,35 @@ export const BLOG_POSTS: BlogPost[] = [
 
 /** Preferred related-post order per slug for topical relevance. */
 const RELATED_SLUGS: Record<string, string[]> = {
+  "trex-iptv-keeps-buffering": [
+    "trex-iptv-buffering-firestick",
+    "trex-iptv-multiple-screens",
+    "how-to-install-trex-iptv-on-firetv",
+  ],
+  "trex-iptv-multiple-screens": [
+    "trex-iptv-keeps-buffering",
+    "how-to-install-trex-iptv-on-firetv",
+    "trex-iptv-buffering-firestick",
+  ],
   "trex-iptv-epg-not-working": [
     "trex-iptv-m3u-vs-xtream-codes",
-    "trex-iptv-buffering-firestick",
+    "trex-iptv-keeps-buffering",
     "how-to-install-trex-iptv-on-firetv",
   ],
   "trex-iptv-buffering-firestick": [
+    "trex-iptv-keeps-buffering",
+    "trex-iptv-multiple-screens",
     "how-to-install-trex-iptv-on-firetv",
-    "trex-iptv-epg-not-working",
-    "trex-iptv-m3u-vs-xtream-codes",
   ],
   "trex-iptv-m3u-vs-xtream-codes": [
     "how-to-install-trex-iptv-on-firetv",
+    "trex-iptv-keeps-buffering",
     "trex-iptv-epg-not-working",
-    "trex-iptv-buffering-firestick",
   ],
   "how-to-install-trex-iptv-on-firetv": [
+    "trex-iptv-keeps-buffering",
+    "trex-iptv-multiple-screens",
     "trex-iptv-m3u-vs-xtream-codes",
-    "trex-iptv-buffering-firestick",
-    "trex-iptv-epg-not-working",
   ],
 };
 
