@@ -26,7 +26,7 @@ const rightCards = [
   {
     icon: <Tag className="h-5 w-5" />,
     title: "Unbeatable Pricing",
-    desc: "Premium Trex IPTV plans starting from just €12 with absolutely no hidden charges.",
+    desc: "Premium Trex IPTV plans starting from just $15 with absolutely no hidden charges.",
   },
   {
     icon: <Play className="h-5 w-5" />,

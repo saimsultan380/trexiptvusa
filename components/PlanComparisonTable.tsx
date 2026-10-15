@@ -11,7 +11,7 @@ const comparisonData = [
     duration: "1 Month",
     setup: "Included Free",
     priceEur: 12,
-    priceUsd: 13.2,
+    priceUsd: 15,
     support: "24/7 WhatsApp",
     value: "Flexible",
   },
@@ -21,7 +21,7 @@ const comparisonData = [
     duration: "3 Months",
     setup: "Included Free",
     priceEur: 25,
-    priceUsd: 27.5,
+    priceUsd: 30,
     support: "24/7 WhatsApp",
     value: "Balanced",
   },
@@ -31,7 +31,7 @@ const comparisonData = [
     duration: "6 Months",
     setup: "Included Free",
     priceEur: 40,
-    priceUsd: 44,
+    priceUsd: 45,
     support: "24/7 WhatsApp",
     value: "Popular",
   },
@@ -41,7 +41,7 @@ const comparisonData = [
     duration: "12 Months",
     setup: "Included Free",
     priceEur: 60,
-    priceUsd: 66,
+    priceUsd: 60,
     support: "24/7 WhatsApp",
     value: "Best Value",
   },
@@ -55,11 +55,11 @@ function PriceCell({ priceEur, priceUsd }: { priceEur: number; priceUsd: number 
   return (
     <>
       <span className="text-[12px] sm:text-[14px] font-bold text-[#ff6b35]">
-        €{priceEur}
+        ${formatUsd(priceUsd)}
       </span>
       <span className="text-[11px] sm:text-[13px] font-medium text-zinc-500">
         {" "}
-        / ${formatUsd(priceUsd)}
+        / €{priceEur}
       </span>
     </>
   );

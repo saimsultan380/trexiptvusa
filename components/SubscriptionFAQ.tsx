@@ -8,7 +8,7 @@ const faqs = [
   {
     question: "How Much Does a Trex IPTV Subscription Cost?",
     answer:
-      "Trex IPTV plans start from just €12 for one month, and you can get full year access for €60. Every plan includes complete access to all channels, movies, and series with no hidden fees.",
+      "Trex IPTV plans start from just $15 for one month, and you can get full year access for $60. Every plan includes complete access to all channels, movies, and series with no hidden fees.",
   },
   {
     question: "What is the Difference Between 1, 2, and 3 Device Plans?",

@@ -36,7 +36,7 @@ const plans = [
   {
     duration: "1 MONTH",
     priceEur: 12,
-    priceUsd: 13.2,
+    priceUsd: 15,
     features: [
       "Anti-Freeze Technology",
       "24/7 Priority Support",
@@ -56,7 +56,7 @@ const plans = [
   {
     duration: "3 MONTHS",
     priceEur: 25,
-    priceUsd: 27.5,
+    priceUsd: 30,
     features: [
       "Anti-Freeze Technology",
       "24/7 Priority Support",
@@ -76,7 +76,7 @@ const plans = [
   {
     duration: "6 MONTHS",
     priceEur: 40,
-    priceUsd: 44,
+    priceUsd: 45,
     features: [
       "Multi-Device Support",
       "Anti-Freeze Technology",
@@ -96,7 +96,7 @@ const plans = [
   {
     duration: "12 MONTHS",
     priceEur: 60,
-    priceUsd: 66,
+    priceUsd: 60,
     features: [
       "24/7 Priority Support",
       "Instant Account Activation",
@@ -128,7 +128,7 @@ function formatPrice(plan: (typeof plans)[0], currency: "eur" | "usd") {
 
 export default function PlanComparisonSection() {
   const phoneNumber = WHATSAPP_NUMBER;
-  const [currency, setCurrency] = useState<"eur" | "usd">("eur");
+  const [currency, setCurrency] = useState<"eur" | "usd">("usd");
 
   return (
     <section id="comparison" className="mx-auto max-w-7xl w-full px-6 sm:px-8 py-12 sm:py-16 lg:py-24 bg-white overflow-hidden">
@@ -174,17 +174,6 @@ export default function PlanComparisonSection() {
         <div className="inline-flex items-center gap-1 p-1 rounded-full border border-zinc-200 bg-zinc-50">
           <button
             type="button"
-            onClick={() => setCurrency("eur")}
-            className={`px-5 py-1.5 rounded-full text-[12px] sm:text-[13px] font-bold transition-all duration-200 ${
-              currency === "eur"
-                ? "bg-[#ff6b35] text-white shadow-sm"
-                : "text-zinc-500 hover:text-zinc-800"
-            }`}
-          >
-            € EUR
-          </button>
-          <button
-            type="button"
             onClick={() => setCurrency("usd")}
             className={`px-5 py-1.5 rounded-full text-[12px] sm:text-[13px] font-bold transition-all duration-200 ${
               currency === "usd"
@@ -193,6 +182,17 @@ export default function PlanComparisonSection() {
             }`}
           >
             $ USD
+          </button>
+          <button
+            type="button"
+            onClick={() => setCurrency("eur")}
+            className={`px-5 py-1.5 rounded-full text-[12px] sm:text-[13px] font-bold transition-all duration-200 ${
+              currency === "eur"
+                ? "bg-[#ff6b35] text-white shadow-sm"
+                : "text-zinc-500 hover:text-zinc-800"
+            }`}
+          >
+            € EUR
           </button>
         </div>
       </div>

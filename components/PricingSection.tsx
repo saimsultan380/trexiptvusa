@@ -10,7 +10,7 @@ const plans = [
   {
     name: "1 Month",
     priceEur: 12,
-    priceUsd: 13.20,
+    priceUsd: 15,
     features: [
       "Anti-Freeze Technology",
       "24/7 Priority Support",
@@ -25,7 +25,7 @@ const plans = [
   {
     name: "3 Months",
     priceEur: 25,
-    priceUsd: 27.50,
+    priceUsd: 30,
     features: [
       "Anti-Freeze Technology",
       "24/7 Priority Support",
@@ -40,7 +40,7 @@ const plans = [
   {
     name: "6 Months",
     priceEur: 40,
-    priceUsd: 44,
+    priceUsd: 45,
     features: [
       "Multi-Device Support",
       "Anti-Freeze Technology",
@@ -55,7 +55,7 @@ const plans = [
   {
     name: "12 Months",
     priceEur: 60,
-    priceUsd: 66,
+    priceUsd: 60,
     features: [
       "24/7 Priority Support",
       "Instant Account Activation",
@@ -71,7 +71,7 @@ const plans = [
 
 export default function PricingSection() {
   const phoneNumber = WHATSAPP_NUMBER;
-  const [currency, setCurrency] = useState<"eur" | "usd">("eur");
+  const [currency, setCurrency] = useState<"eur" | "usd">("usd");
 
   function formatPrice(plan: typeof plans[0]) {
     if (currency === "eur") {
@@ -104,16 +104,6 @@ export default function PricingSection() {
         {/* Currency Toggle */}
         <div className="inline-flex items-center gap-1 p-1 rounded-full border border-zinc-200 bg-zinc-50">
           <button
-            onClick={() => setCurrency("eur")}
-            className={`px-5 py-1.5 rounded-full text-[13px] font-bold transition-all duration-200 ${
-              currency === "eur"
-                ? "bg-[#ff6b35] text-white shadow-sm"
-                : "text-zinc-500 hover:text-zinc-800"
-            }`}
-          >
-            € EUR
-          </button>
-          <button
             onClick={() => setCurrency("usd")}
             className={`px-5 py-1.5 rounded-full text-[13px] font-bold transition-all duration-200 ${
               currency === "usd"
@@ -122,6 +112,16 @@ export default function PricingSection() {
             }`}
           >
             $ USD
+          </button>
+          <button
+            onClick={() => setCurrency("eur")}
+            className={`px-5 py-1.5 rounded-full text-[13px] font-bold transition-all duration-200 ${
+              currency === "eur"
+                ? "bg-[#ff6b35] text-white shadow-sm"
+                : "text-zinc-500 hover:text-zinc-800"
+            }`}
+          >
+            € EUR
           </button>
         </div>
       </motion.div>
