@@ -2,7 +2,7 @@
 
 import { WHATSAPP_NUMBER } from "@/lib/site";
 
-import React, { useState } from "react";
+import React from "react";
 import {
   Check,
   ArrowUpRight,
@@ -35,8 +35,7 @@ const featureIcons: Record<string, React.ReactNode> = {
 const plans = [
   {
     duration: "1 MONTH",
-    priceEur: 12,
-    priceUsd: 15,
+    price: 15,
     features: [
       "Anti-Freeze Technology",
       "24/7 Priority Support",
@@ -55,8 +54,7 @@ const plans = [
   },
   {
     duration: "3 MONTHS",
-    priceEur: 25,
-    priceUsd: 30,
+    price: 30,
     features: [
       "Anti-Freeze Technology",
       "24/7 Priority Support",
@@ -75,8 +73,7 @@ const plans = [
   },
   {
     duration: "6 MONTHS",
-    priceEur: 40,
-    priceUsd: 45,
+    price: 45,
     features: [
       "Multi-Device Support",
       "Anti-Freeze Technology",
@@ -95,8 +92,7 @@ const plans = [
   },
   {
     duration: "12 MONTHS",
-    priceEur: 60,
-    priceUsd: 60,
+    price: 60,
     features: [
       "24/7 Priority Support",
       "Instant Account Activation",
@@ -115,20 +111,8 @@ const plans = [
   },
 ];
 
-function formatUsd(amount: number) {
-  return amount % 1 === 0 ? amount.toFixed(0) : amount.toFixed(2);
-}
-
-function formatPrice(plan: (typeof plans)[0], currency: "eur" | "usd") {
-  if (currency === "eur") {
-    return { symbol: "€", amount: plan.priceEur.toFixed(0) };
-  }
-  return { symbol: "$", amount: formatUsd(plan.priceUsd) };
-}
-
 export default function PlanComparisonSection() {
   const phoneNumber = WHATSAPP_NUMBER;
-  const [currency, setCurrency] = useState<"eur" | "usd">("usd");
 
   return (
     <section id="comparison" className="mx-auto max-w-7xl w-full px-6 sm:px-8 py-12 sm:py-16 lg:py-24 bg-white overflow-hidden">
@@ -169,39 +153,9 @@ export default function PlanComparisonSection() {
         </div>
       </motion.div>
 
-      {/* Currency toggle */}
-      <div className="flex justify-center mb-6 sm:mb-8">
-        <div className="inline-flex items-center gap-1 p-1 rounded-full border border-zinc-200 bg-zinc-50">
-          <button
-            type="button"
-            onClick={() => setCurrency("usd")}
-            className={`px-5 py-1.5 rounded-full text-[12px] sm:text-[13px] font-bold transition-all duration-200 ${
-              currency === "usd"
-                ? "bg-[#ff6b35] text-white shadow-sm"
-                : "text-zinc-500 hover:text-zinc-800"
-            }`}
-          >
-            $ USD
-          </button>
-          <button
-            type="button"
-            onClick={() => setCurrency("eur")}
-            className={`px-5 py-1.5 rounded-full text-[12px] sm:text-[13px] font-bold transition-all duration-200 ${
-              currency === "eur"
-                ? "bg-[#ff6b35] text-white shadow-sm"
-                : "text-zinc-500 hover:text-zinc-800"
-            }`}
-          >
-            € EUR
-          </button>
-        </div>
-      </div>
-
       {/* Pricing cards — below header */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 items-stretch justify-items-center sm:justify-items-stretch">
-        {plans.map((plan, index) => {
-          const { symbol, amount } = formatPrice(plan, currency);
-          return (
+        {plans.map((plan, index) => (
           <motion.div
             key={plan.duration}
             initial={{ opacity: 0, y: 24 }}
@@ -227,15 +181,9 @@ export default function PlanComparisonSection() {
 
             {/* Price */}
             <div className="text-center mb-3">
-              <motion.p
-                key={`${plan.duration}-${currency}`}
-                initial={{ opacity: 0, y: -6 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.2 }}
-                className={`text-[28px] sm:text-[34px] font-extrabold leading-none ${plan.recommended ? "text-[#ff6b35]" : "text-[#ff6b35]"}`}
-              >
-                {symbol}{amount}
-              </motion.p>
+              <p className="text-[28px] sm:text-[34px] font-extrabold leading-none text-[#ff6b35]">
+                ${plan.price}
+              </p>
             </div>
 
             {/* Guarantee */}
@@ -295,8 +243,7 @@ export default function PlanComparisonSection() {
               <ArrowUpRight className="h-4 w-4" />
             </motion.a>
           </motion.div>
-          );
-        })}
+        ))}
       </div>
     </section>
   );

@@ -10,8 +10,7 @@ const comparisonData = [
     bestFor: "First Time and Short Term Users",
     duration: "1 Month",
     setup: "Included Free",
-    priceEur: 12,
-    priceUsd: 15,
+    price: 15,
     support: "24/7 WhatsApp",
     value: "Flexible",
   },
@@ -20,8 +19,7 @@ const comparisonData = [
     bestFor: "Regular Daily Streamers",
     duration: "3 Months",
     setup: "Included Free",
-    priceEur: 25,
-    priceUsd: 30,
+    price: 30,
     support: "24/7 WhatsApp",
     value: "Balanced",
   },
@@ -30,8 +28,7 @@ const comparisonData = [
     bestFor: "Frequent and Extended Viewers",
     duration: "6 Months",
     setup: "Included Free",
-    priceEur: 40,
-    priceUsd: 45,
+    price: 45,
     support: "24/7 WhatsApp",
     value: "Popular",
   },
@@ -40,28 +37,17 @@ const comparisonData = [
     bestFor: "Long Term Trex IPTV Users",
     duration: "12 Months",
     setup: "Included Free",
-    priceEur: 60,
-    priceUsd: 60,
+    price: 60,
     support: "24/7 WhatsApp",
     value: "Best Value",
   },
 ];
 
-function formatUsd(amount: number) {
-  return amount % 1 === 0 ? amount.toFixed(0) : amount.toFixed(2);
-}
-
-function PriceCell({ priceEur, priceUsd }: { priceEur: number; priceUsd: number }) {
+function PriceCell({ price }: { price: number }) {
   return (
-    <>
-      <span className="text-[12px] sm:text-[14px] font-bold text-[#ff6b35]">
-        ${formatUsd(priceUsd)}
-      </span>
-      <span className="text-[11px] sm:text-[13px] font-medium text-zinc-500">
-        {" "}
-        / €{priceEur}
-      </span>
-    </>
+    <span className="text-[12px] sm:text-[14px] font-bold text-[#ff6b35]">
+      ${price}
+    </span>
   );
 }
 
@@ -166,7 +152,7 @@ export default function PlanComparisonTable() {
                         Price
                       </dt>
                       <dd>
-                        <PriceCell priceEur={item.priceEur} priceUsd={item.priceUsd} />
+                        <PriceCell price={item.price} />
                       </dd>
                     </div>
                     <div>
@@ -234,7 +220,7 @@ export default function PlanComparisonTable() {
                       {item.setup}
                     </td>
                     <td className="px-3 xl:px-5 py-4">
-                      <PriceCell priceEur={item.priceEur} priceUsd={item.priceUsd} />
+                      <PriceCell price={item.price} />
                     </td>
                     <td className="px-3 xl:px-5 py-4 text-[12px] xl:text-[13px] font-medium text-zinc-600">
                       {item.support}

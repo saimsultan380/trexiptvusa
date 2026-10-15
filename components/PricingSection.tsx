@@ -2,15 +2,13 @@
 
 import { WHATSAPP_NUMBER } from "@/lib/site";
 
-import { useState } from "react";
 import { Check, Calendar, ArrowUpRight, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 
 const plans = [
   {
     name: "1 Month",
-    priceEur: 12,
-    priceUsd: 15,
+    price: 15,
     features: [
       "Anti-Freeze Technology",
       "24/7 Priority Support",
@@ -24,8 +22,7 @@ const plans = [
   },
   {
     name: "3 Months",
-    priceEur: 25,
-    priceUsd: 30,
+    price: 30,
     features: [
       "Anti-Freeze Technology",
       "24/7 Priority Support",
@@ -39,8 +36,7 @@ const plans = [
   },
   {
     name: "6 Months",
-    priceEur: 40,
-    priceUsd: 45,
+    price: 45,
     features: [
       "Multi-Device Support",
       "Anti-Freeze Technology",
@@ -54,8 +50,7 @@ const plans = [
   },
   {
     name: "12 Months",
-    priceEur: 60,
-    priceUsd: 60,
+    price: 60,
     features: [
       "24/7 Priority Support",
       "Instant Account Activation",
@@ -71,14 +66,6 @@ const plans = [
 
 export default function PricingSection() {
   const phoneNumber = WHATSAPP_NUMBER;
-  const [currency, setCurrency] = useState<"eur" | "usd">("usd");
-
-  function formatPrice(plan: typeof plans[0]) {
-    if (currency === "eur") {
-      return { symbol: "€", amount: plan.priceEur.toFixed(0) };
-    }
-    return { symbol: "$", amount: plan.priceUsd % 1 === 0 ? plan.priceUsd.toFixed(0) : plan.priceUsd.toFixed(2) };
-  }
 
   return (
     <section id="pricing" className="mx-auto max-w-7xl w-full px-6 sm:px-8 py-12 sm:py-16 lg:py-28 bg-white overflow-hidden">
@@ -97,40 +84,14 @@ export default function PricingSection() {
         <h2 className="text-[26px] sm:text-4xl lg:text-5xl font-bold tracking-tight text-zinc-900 mb-3 sm:mb-4">
           Choose the Best Discounted <span className="text-[#ff6b35]">Trex IPTV</span> Plan
         </h2>
-        <p className="text-zinc-500 text-[12px] sm:text-[15px] font-medium max-w-xl mx-auto mb-6 sm:mb-8">
+        <p className="text-zinc-500 text-[12px] sm:text-[15px] font-medium max-w-xl mx-auto">
           Premium streaming at unbeatable rates. No contracts, no hidden fees, instant activation.
         </p>
-
-        {/* Currency Toggle */}
-        <div className="inline-flex items-center gap-1 p-1 rounded-full border border-zinc-200 bg-zinc-50">
-          <button
-            onClick={() => setCurrency("usd")}
-            className={`px-5 py-1.5 rounded-full text-[13px] font-bold transition-all duration-200 ${
-              currency === "usd"
-                ? "bg-[#ff6b35] text-white shadow-sm"
-                : "text-zinc-500 hover:text-zinc-800"
-            }`}
-          >
-            $ USD
-          </button>
-          <button
-            onClick={() => setCurrency("eur")}
-            className={`px-5 py-1.5 rounded-full text-[13px] font-bold transition-all duration-200 ${
-              currency === "eur"
-                ? "bg-[#ff6b35] text-white shadow-sm"
-                : "text-zinc-500 hover:text-zinc-800"
-            }`}
-          >
-            € EUR
-          </button>
-        </div>
       </motion.div>
 
       {/* Cards — stacked on mobile, grid on larger screens */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 items-stretch justify-items-center sm:justify-items-stretch">
-        {plans.map((plan, index) => {
-          const { symbol, amount } = formatPrice(plan);
-          return (
+        {plans.map((plan, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
@@ -165,17 +126,13 @@ export default function PricingSection() {
 
               {/* Price */}
               <div className="mb-1">
-                <motion.div
-                  key={currency}
-                  initial={{ opacity: 0, y: -6 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.2 }}
+                <div
                   className={`text-[36px] sm:text-[40px] font-extrabold leading-none ${
                     plan.recommended ? "text-[#ff6b35]" : "text-zinc-900"
                   }`}
                 >
-                  {symbol}{amount}
-                </motion.div>
+                  ${plan.price}
+                </div>
               </div>
 
               {/* Guarantee badge */}
@@ -220,8 +177,7 @@ export default function PricingSection() {
                 <ArrowUpRight className="h-4 w-4" />
               </motion.a>
             </motion.div>
-          );
-        })}
+        ))}
       </div>
     </section>
   );
