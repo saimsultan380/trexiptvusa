@@ -70,11 +70,6 @@ export default function BlogClient() {
                     priority
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute top-3 left-3 flex flex-wrap gap-2">
-                    <span className="px-2.5 py-1 rounded-md bg-[#ff6b35] text-white text-[11px] font-bold shadow-sm">
-                      {post.category}
-                    </span>
-                  </div>
                 </Link>
 
                 {/* Card Content */}
