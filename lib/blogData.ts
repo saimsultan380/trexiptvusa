@@ -13,6 +13,55 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "trex-iptv-channels-not-loading",
+    href: "/trex-iptv-channels-not-loading/",
+    title: "Trex IPTV Channels Not Loading? 12 Ways to Fix It Easily",
+    description:
+      "Trex IPTV channels not loading on Firestick, TiviMate, or Smart TV? Discover 12 practical fixes for loading errors, black screens and playback issues.",
+    image: "/trex_iptv_channels_not_loading_square.png",
+    category: "Troubleshooting Guide",
+    readTime: "12 min read",
+    date: "November 2026",
+    author: "Trex IPTV Support Team",
+    featured: true,
+  },
+  {
+    slug: "best-iptv-players-for-trex-iptv",
+    href: "/best-iptv-players-for-trex-iptv/",
+    title: "Best IPTV Players for Trex IPTV: Top 14 IPTV Apps Compared",
+    description:
+      "Discover the best IPTV players for Trex IPTV, including TiviMate, IPTV Smarters Pro, IBO Player & more. Compare IPTV app features, devices & setup options.",
+    image: "/trex_iptv_best_players_square.png",
+    category: "Comparison Guide",
+    readTime: "14 min read",
+    date: "November 2026",
+    author: "Trex IPTV Support Team",
+  },
+  {
+    slug: "trex-iptv-vod-not-working",
+    href: "/trex-iptv-vod-not-working/",
+    title: "Trex IPTV VOD Not Working? Fix Movies & Series Playback Issues",
+    description:
+      "Trex IPTV VOD not working? Learn how to fix movies not loading, series playback errors, buffering, black screens, and other VOD problems.",
+    image: "/trex_iptv_vod_not_working_square.png",
+    category: "Troubleshooting Guide",
+    readTime: "10 min read",
+    date: "November 2026",
+    author: "Trex IPTV Support Team",
+  },
+  {
+    slug: "trex-iptv-catch-up-not-working",
+    href: "/trex-iptv-catch-up-not-working/",
+    title: "Trex IPTV Catch-Up Not Working? 8 Ways to Fix Catch-Up Issue",
+    description:
+      "Trex IPTV catch-up not working? Learn how to fix missing replays, black screens, buffering, wrong programmes, and other common catch-up problems.",
+    image: "/trex_iptv_catch_up_not_working_square.png",
+    category: "Troubleshooting Guide",
+    readTime: "11 min read",
+    date: "November 2026",
+    author: "Trex IPTV Support Team",
+  },
+  {
     slug: "trex-iptv-keeps-buffering",
     href: "/trex-iptv-keeps-buffering/",
     title: "Trex IPTV Keeps Buffering? 15 Ways to Fix Trex IPTV Buffering",
@@ -23,7 +72,6 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "12 min read",
     date: "September 2026",
     author: "Trex IPTV Support Team",
-    featured: true,
   },
   {
     slug: "trex-iptv-multiple-screens",
@@ -89,34 +137,54 @@ export const BLOG_POSTS: BlogPost[] = [
 
 /** Preferred related-post order per slug for topical relevance. */
 const RELATED_SLUGS: Record<string, string[]> = {
-  "trex-iptv-keeps-buffering": [
-    "trex-iptv-buffering-firestick",
-    "trex-iptv-multiple-screens",
+  "trex-iptv-channels-not-loading": [
+    "trex-iptv-keeps-buffering",
+    "best-iptv-players-for-trex-iptv",
     "how-to-install-trex-iptv-on-firetv",
   ],
-  "trex-iptv-multiple-screens": [
+  "best-iptv-players-for-trex-iptv": [
+    "how-to-install-trex-iptv-on-firetv",
+    "trex-iptv-m3u-vs-xtream-codes",
+    "trex-iptv-channels-not-loading",
+  ],
+  "trex-iptv-vod-not-working": [
+    "trex-iptv-channels-not-loading",
     "trex-iptv-keeps-buffering",
+    "best-iptv-players-for-trex-iptv",
+  ],
+  "trex-iptv-catch-up-not-working": [
+    "trex-iptv-epg-not-working",
+    "trex-iptv-vod-not-working",
+    "trex-iptv-channels-not-loading",
+  ],
+  "trex-iptv-keeps-buffering": [
+    "trex-iptv-channels-not-loading",
+    "trex-iptv-buffering-firestick",
+    "trex-iptv-vod-not-working",
+  ],
+  "trex-iptv-multiple-screens": [
+    "trex-iptv-channels-not-loading",
     "how-to-install-trex-iptv-on-firetv",
     "trex-iptv-buffering-firestick",
   ],
   "trex-iptv-epg-not-working": [
+    "trex-iptv-catch-up-not-working",
     "trex-iptv-m3u-vs-xtream-codes",
-    "trex-iptv-keeps-buffering",
-    "how-to-install-trex-iptv-on-firetv",
+    "best-iptv-players-for-trex-iptv",
   ],
   "trex-iptv-buffering-firestick": [
+    "trex-iptv-channels-not-loading",
     "trex-iptv-keeps-buffering",
-    "trex-iptv-multiple-screens",
     "how-to-install-trex-iptv-on-firetv",
   ],
   "trex-iptv-m3u-vs-xtream-codes": [
+    "best-iptv-players-for-trex-iptv",
     "how-to-install-trex-iptv-on-firetv",
-    "trex-iptv-keeps-buffering",
     "trex-iptv-epg-not-working",
   ],
   "how-to-install-trex-iptv-on-firetv": [
-    "trex-iptv-keeps-buffering",
-    "trex-iptv-multiple-screens",
+    "best-iptv-players-for-trex-iptv",
+    "trex-iptv-channels-not-loading",
     "trex-iptv-m3u-vs-xtream-codes",
   ],
 };

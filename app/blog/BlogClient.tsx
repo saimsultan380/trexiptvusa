@@ -31,8 +31,8 @@ export default function BlogClient() {
             transition={{ duration: 0.55, delay: 0.08, ease: "easeOut" }}
             className="mt-4 sm:mt-5 text-sm sm:text-base text-zinc-600 leading-relaxed max-w-2xl"
           >
-            Practical guides for installing Trex IPTV, choosing M3U or Xtream Codes,
-            fixing Firestick buffering, and repairing a missing EPG TV guide.
+            Practical guides for installing Trex IPTV, comparing IPTV players, fixing channels
+            not loading, VOD and catch-up playback, Firestick buffering, and EPG TV guide issues.
           </motion.p>
         </div>
       </section>
@@ -45,7 +45,7 @@ export default function BlogClient() {
               Latest IPTV guides
             </h2>
             <p className="mt-1.5 text-xs sm:text-sm text-zinc-600">
-              Installation, connection methods, buffering fixes, and EPG troubleshooting.
+              Player comparisons, channel loading, VOD, catch-up, buffering, and EPG fixes.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -60,7 +60,7 @@ export default function BlogClient() {
                 {/* Thumbnail Image */}
                 <Link
                   href={post.href}
-                  className="relative w-full aspect-[16/10] bg-zinc-100 overflow-hidden block"
+                  className="relative w-full aspect-square bg-zinc-100 overflow-hidden block"
                 >
                   <Image
                     src={post.image}
